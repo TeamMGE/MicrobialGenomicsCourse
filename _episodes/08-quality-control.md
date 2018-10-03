@@ -540,7 +540,7 @@ $ seqtk trimfq -q 0.01 ERR026473_1.fastq > ERR026473_1_trim.fastq
 ~~~
 {: .bash}
 
-Notice that we needed to redirect the output to a file. If we don't do that, the trimmed fastq data will be disaplayed in the console.
+Notice that we needed to redirect the output to a file. If we don't do that, the trimmed fastq data will be displayed in the console.
 
 
 > ## Exercise
