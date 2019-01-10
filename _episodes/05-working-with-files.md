@@ -1,4 +1,3 @@
-
 ---
 title: "Working with Files and Directories"
 teaching: 30
