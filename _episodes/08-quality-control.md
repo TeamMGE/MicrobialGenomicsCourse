@@ -53,6 +53,8 @@ The first step in the variant calling workflow is to take the FASTQ files receiv
 and assess the quality of the sequence reads. 
 
 ![workflow_qc](../fig/var_calling_workflow_qc.png)
+
+
 ## Details on the FASTQ format
 
 Although it looks complicated (and it is), it's easy to understand the
@@ -370,84 +372,45 @@ $ open ERR026473_1_fastqc/fastqc_report.html
 ~~~
 {: .bash}
 
-However, if you try this on our AWS instance, you'll get an error: 
+However, if you try this on our server, you'll get an error: 
 
 ~~~
 Couldn't get a file descriptor referring to the console
 ~~~
 {: .output}
 
-This is because the AWS instance we're using doesn't have any web
+This is because the server we're using doesn't have any web
 browsers installed on it, so the remote computer doesn't know how to 
 open the file. We want to look at the webpage summary reports, so 
 let's transfer them to our local computers (i.e. your laptop).
 
-To transfer a file from a remote server to our own machines, we will
-use a variant of the `cp` command called `scp`. The `s` stands for
-"secure" - this is a secure version of copying. 
 
-For the `cp` command, the syntax was:
+# Moving files between your instance and your laptop
 
-~~~
-$ cp my_file new_location
-~~~
-{: .bash}
+We need to get the html files we produced to our own computers.There are also several ways to do this, but it's *always* easier
+to start the transfer locally. **This means if you're using a transfer program, it needs to be
+installed on your local machine, not on your instance. If you're typing into a terminal,
+the terminal should not be logged into your instance, it should be showing your local computer.**
 
-The syntax for `scp` is the same, but now `my_file` and
-`new_location` are on separate computers, so we need to give an 
-absolute path, including the name of our remote computer. First we
-will make a new directory on our computer to store the HTML files
-we're transfering. Let's put it on our desktop for now. Open a new
-tab in your terminal program (you can use the pull down menu at the
-top of your screen or the Cmd+t keyboard shortcut) and type: 
+FileZilla is one of many free FTP clients that allow you to move files between local and remote locations. 
 
-~~~
-$ mkdir ~/Desktop/fastqc_html
-~~~
-{: .bash}
+It is convenient if you would like a graphical user interface to manage files and folders and if you have only a few files to move.
 
-Now we can transfer our HTML files to our local computer using `scp`. This command will ask for your password. 
 
-~~~
-$ scp -r studentxx@ec2-34-241-64-44.eu-west-1.compute.amazonaws.com:~/dc_workshop/results/fastqc_untrimmed_reads/*_fastqc ~/Desktop/fastqc_html
-~~~
-{: .bash}
+- Enter the location and user credentials of the remote server you are connecting to (upper panel)
+- Enter your username and the password 
+- for port enter 22
+- Files on your local computer will be in the highlighted (left panel)
+- Your Desktop can be found in a folder called 'Users' > 'your computer's username' > and Desktop
+- Files on your remote computer will be in highlighted the right panel.
+- Move files between computers by drawing and dropping them in the desired locations.
 
-This looks really complicated, so let's break it down. The first part
-of the command `dcuser@ec2-34-238-162-94.compute-1.amazonaws.com` is
-the address for your remote computer. Make sure you replace everything
-after `dcuser@` with your instance number (the one you used to log in). 
+Tip: You can resize windows in FileZilla for easier viewing.
 
-The second part starts with a `:` and then gives the absolute path
-of the files you want to transfer from your remote computer. Don't
-forget the `:`. We used a wildcard (`*.html`) to indicate that we want all of
-the HTML files. 
+![filezilla](../fig/filezilla.png)
 
-The third part of the command gives the absolute path of the location
-you want to put the files. This is on your local computer and is the 
-directory we just created `~/Desktop/fastqc_html`. 
 
-You should see a status output like this:
-
-~~~
-ERR026473_1_fastqc.html                                    100%  318KB 317.8KB/s   00:01    
-ERR026473_2_fastqc.html                                    100%  330KB 329.8KB/s   00:00    
-ERR026474_1_fastqc.html                                    100%  369KB 369.5KB/s   00:00    
-ERR026474_2_fastqc.html                                    100%  323KB 323.4KB/s   00:01    
-~~~
-{: .output}
-
-Now we can go to our new directory and open the HTML files. 
-
-~~~
-$ cd ~/Desktop/fastqc_html/
-$ open */*.html
-~~~
-{: .bash}
-
-Your computer will open each of the HTML files in your default web
-browser. Depending on your settings, this might be as six separate
-tabs in a single window or six separate browser windows.
+Now we can go to our new directory on your own computer and open the HTML files. 
 
 > ## Exercise
 > 
