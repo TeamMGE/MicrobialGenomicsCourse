@@ -12,7 +12,7 @@ get help.
 
 ## Windows
 ### Putty
-You will need a terminal program to access the HPC cluster. This is already available on Mac and Linux.
+You will need a terminal program to access the server. This **is already available on Mac and Linux**.
 - Go to the [Putty download page](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
 - Click on putty.exe link to download the install file
 - To use it, double-click on the download file
