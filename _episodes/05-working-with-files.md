@@ -89,7 +89,9 @@ $ ls /usr/bin/*.sh
 {: .bash}
 
 ~~~
-/usr/bin/amuFormat.sh  /usr/bin/gettext.sh  /usr/bin/gvmap.sh
+/usr/bin/fastq_quality_boxplot_graph.sh               /usr/bin/gettext.sh
+/usr/bin/fastx_nucleotide_distribution_graph.sh       /usr/bin/gvmap.sh
+/usr/bin/fastx_nucleotide_distribution_line_graph.sh  /usr/bin/paraclu-cut.sh
 ~~~
 {: .output}
 
