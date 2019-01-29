@@ -149,8 +149,8 @@ i.e.,
 the directory that the computer assumes we want to run commands in
 unless we explicitly specify something else.
 Here,
-the computer's response is `/home/dcuser`,
-which is the top level directory within our cloud system:
+the computer's response is `/home/users/courses/molepi30`,
+which is a directory within our system:
 
 ~~~
 $ pwd
@@ -158,23 +158,23 @@ $ pwd
 {: .bash}
 
 ~~~
-/home/dcuser
+/home/users/courses/molepi30
 ~~~
 {: .output}
 
 Let's look at how our file system is organized.  
 
-At the top is our `dcuser` directory, which holds all the 
+At the top is our `molepi30` directory, which holds all the 
 subdirectories and files.
 
-Inside that directory are some other directories:
+Inside that directory is another directory:
 
 ~~~
-FastQC	TrimGalore-0.4.5  Trimmomatic-0.32  dc_sample_data  freebayes  pplacer-Linux-v1.1.alpha17  quast-4.6.1
+dc_sample_data
 ~~~
 {: .output}
 
-We'll be working with these subdirectories throughout this workshop.  
+We'll be working with this subdirectory throughout this workshop.  
 
 The command to change locations in our file system is `cd` followed by a
 directory name to change our working directory.
