@@ -1,4 +1,4 @@
----o
+---
 title: "Logging into Server"
 teaching: 5
 exercises: 5
