@@ -1,15 +1,15 @@
----
-title: "Logging onto Cloud"
+---o
+title: "Logging into Server"
 teaching: 5
 exercises: 5
 questions:
-- How do I connect to an AWS instance?
+- How do I connect to a Linux server?
 objectives:
-- Log onto to a running instance
-- Log off from a running instance
+- Log onto to a running server
+- Log off from a running server
 keypoints:
-- You can use one set of log-in credentials for many instances
-- Logging off an instance is not the same as turning off an instance
+- You can use
+- Logging off a server is not the same as turning off a server
 ---
 
 <script language="javascript" type="text/javascript">
@@ -34,21 +34,8 @@ function change_content_by_platform(form_control){
 window.onload = set_page_view_defaults;
 </script>
 
-## Important Note
 
-This lesson covers how to log into, and out of, an *already running* Amazon instance.
-
-
-## Background to AWS
-
-Setting up a new AWS instance requires a credit card, an AWS account, and up to
-a day of verification time. To save time, your instructor launched a remote computer (instance) for you prior
-to the workshop, and connected it to our lesson data. You've already logged into it at
-least once, but now that you're more comfortable with the command line, lets go back and talk about how it all works.
-
-
-We have a pre-configured copy of the data needed for this workshop that is always available
-to attach to a new instance on Amazon, as long as you have an account, and the log-in credentials to open it.
+##  Logging into a Linux Server
 
 To access the pre-configured workshop data, you'll need to use our log-in credentials (user name and password). A user name will be assigned to you at the workshop. In the following, always replace dcuser with your user name 
 and the password with the password assigned to you.
@@ -58,19 +45,11 @@ and the password with the password assigned to you.
 - Username: dcuser
 - Password: password
 
-But first, you need a place to log *into*! To find the instance that's attached to that data,
+But first, you need a place to log *into*! To find the server that holds your data,
 you'll need something called an IP address. Your instructor should have given this to you
 at the beginning of the workshop.
 
-An IP address is essentially the numerical version of a web address like www.amazon.com
-
-Recall that cloud computing is about choice. You can rent just a single processor on a large computer
-for a small project, or you can rent hundreds of processors spread across multiple computers for
-a large project. In either case, once you rent the collection of processors, Amazon will
-present your rental to you as if it was a single computer. So, the physical computers that host your
-instances don't really move, *but* every time you launch a new instance, it will have a new IP address.
-
-So, each time you launch a new instance, the *IP address* changes, but your *Log-in Credentials* don't have to.
+An IP address is essentially the numerical version of a web address like www.google.com
 
 ## Connection Protocols
 
@@ -79,7 +58,7 @@ with a secure way to use a [shell](http://swcarpentry.github.io/shell-novice). I
 the shell will be running on a remote machine. This protocol is available for every
 operating system, but sometimes requires additional software.
 
-## Logging onto a cloud instance
+## Logging onto a server
 
 **Please select the platform you wish to use for the exercises: <select id="id_platform" name="platformlist" onchange="change_content_by_platform('id_platform');return false;"><option value="aws_unix" id="id_aws_unix" selected> AWS_UNIX </option><option value="aws_win" id="id_aws_win" selected> AWS_Windows </option></select>**
 
@@ -90,7 +69,7 @@ operating system, but sometimes requires additional software.
 #### **Connecting using PC**<br>
 *Prerequisites*: You must have an SSH client. There are several free options but you should have installed [[PuTTY.exe](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)] at the begining of the workshop, and we're going to continue using that.
 
-A. Open PuTTY; In the 'Host Name (or IP address)' section paste in the IP address provided by your instructor (or the IP address of an instance you have provisioned yourself). *Keep the default selection 'SSH' and Port (22)*.
+A. Open PuTTY; In the 'Host Name (or IP address)' section paste in the IP address provided by your instructor. *Keep the default selection 'SSH' and Port (22)*.
 
 <p><img src="../fig/putty_screenshot_1.png" width="500"></p>
 B. Click 'Open' and you will be presented with a security warning. Select 'Yes' to continue to connect. <br>
@@ -114,7 +93,7 @@ D. You should now be connected!
 ![terminal icon](../fig/terminal.png)<br>
 
 
-A. Open the terminal and type the following command substituting 'ip_address' for the IP address your instructor will provide (or the IP address of an instance you have provisioned yourself). *Be sure to pay attention to capitalization and spaces*<br>
+A. Open the terminal and type the following command substituting 'ip_address' for the IP address your instructor will provide. *Be sure to pay attention to capitalization and spaces*<br>
 
 ~~~
 $ ssh dcuser@ip_address
@@ -136,13 +115,10 @@ D. You should now be connected!
 
 </div>
 
-## Logging off a cloud instance
+## Logging off a server
 
-Logging off your instance is a lot like logging out of your local computer: it stops any processes
-that are currently running, but doesn't shut the computer off. AWS instances acrue charges whenever
-they are running, *even if you are logged off*.
-
-If you are *completely* done with your AWS instance, you will need to **terminate** it after you log off. Instructions for terminating an instance are here: [launching cloud instances on your own](http://www.datacarpentry.org/cloud-genomics/LaunchingInstances/).
+Logging off the server is a lot like logging out of your local computer: it stops any processes
+that are currently running, but doesn't shut the computer off.
 
 To log off, use the `exit` command in the same terminal you connected with. This will close the connection, and your terminal will go back to showing your local computer:
 
@@ -157,9 +133,9 @@ Amandas-MacBook-Pro-3 $
 
 Internet connections can be slow or unstable. If you're just browsing the internet, that means you have
 reload pages, or wait for pictures to load. When you're working in cloud, that means you'll sometimes
-be suddenly disconnected from your instance when you weren't expecting it. Even on the best internet
+be suddenly disconnected from the server when you weren't expecting it. Even on the best internet
 connections, your signal will occasionally drop, so it's good to know the above SSH steps, and be able
-to log into AWS without looking up the instructions each time.
+to log into the server without looking up the instructions each time.
 
 In the next section, we'll also show you some programs that you can use to keep your processes going
 even if your connection drops. But for now, just practice logging on and off a few times.
