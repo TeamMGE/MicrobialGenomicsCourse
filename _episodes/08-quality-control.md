@@ -544,7 +544,7 @@ Notice that we needed to redirect the output to a file. If we don't do that, the
 
 
 > ## Exercise
-> Use seqtk fqchk to compare the untrimmed and trimmed reads. 
+> Use seqtk fqchk to compare the untrimmed and trimmed reads in terms of number of sequenced bases, percentage of A,G,C,T and N and average quality. What do you notice? Discuss with your neighbor. 
 >
 >
 >> ## Solution
@@ -593,7 +593,9 @@ of each of the FASTQ files in our directory. `outfile` is the
 second variable in our loop and is defined by adding `_trim.fastq` to
 the end of our input file name. Use `{}` to wrap the variable so that `_trim.fastq` will
 not be interpreted as part of the variable name. In addition, quoting the shell variables is
-a good practice AND necessary if your variables have spaces in them. For more, check [Bash Pitfalls](http://mywiki.wooledge.org/BashPitfalls).
+a good practice AND necessary if your variables have spaces in them. 
+
+For more, check [Bash Pitfalls](http://mywiki.wooledge.org/BashPitfalls).
 There are no spaces before or after the `=`.
 
 Go ahead and run the for loop. It should take a few minutes for
