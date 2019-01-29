@@ -219,18 +219,18 @@ reads using a wildcard within our search string for `grep`.
 > ## Exercise
 > 
 > How many reads in the `SRR098026.fastq` file contain at least two regions of 5 unknown
-> nucleotides in a row, separated by any number of known nucleotides?
+> nucleotides in a row, separated by a single 'A'?
 >
 >> ## Solution
 >> 
 >> ~~~
->> $ grep "NNNNN*NNNNN" SRR098026.fastq > bad_reads_2.txt
+>> $ grep "NNNNNANNNNN" SRR098026.fastq > bad_reads_2.txt
 >> $ wc -l bad_reads_2.txt
 >> ~~~
 >> {: .bash}
 >> 
 >> ~~~
->> 186 bad_reads_2.txt
+>> 14 bad_reads_2.txt
 >> ~~~
 >> {: .output}
 > {: .solution}
@@ -273,13 +273,13 @@ efficiently. Let's take a few minutes to practice.
 >
 > Now that we know about the pipe (`|`), write a single command to find the number of reads 
 > in the `SRR098026.fastq` file that contain at least two regions of 5 unknown
-> nucleotides in a row, separated by any number of known nucleotides. Do this without creating 
+> nucleotides in a row, separated by a single 'A'. Do this without creating 
 > a new file.
 >
 >> ## Solution
 >> 
 >> ~~~
->> $ grep "NNNNN*NNNNN" SRR098026.fastq | wc -l
+>> $ grep "NNNNNANNNNN" SRR098026.fastq | wc -l
 >> ~~~
 >> {: .bash}
 >>
