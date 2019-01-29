@@ -89,9 +89,7 @@ $ ls /usr/bin/*.sh
 {: .bash}
 
 ~~~
-/usr/bin/fastq_quality_boxplot_graph.sh               /usr/bin/gettext.sh
-/usr/bin/fastx_nucleotide_distribution_graph.sh       /usr/bin/gvmap.sh
-/usr/bin/fastx_nucleotide_distribution_line_graph.sh  /usr/bin/paraclu-cut.sh
+/usr/bin/amuFormat.sh  /usr/bin/gettext.sh  /usr/bin/gvmap.sh
 ~~~
 {: .output}
 
@@ -521,6 +519,3 @@ you will be asked whether you want to override your permission settings.
 > > {: .output}
 > {: .solution}
 {: .challenge}
-
-
-
