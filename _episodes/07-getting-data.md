@@ -23,7 +23,6 @@ To make room for our sequencing data we will remove the remaining sample data fr
 ~~~
 cd 
 rm -r dc_sample_data/
-rm .dc_sampledata_lite/
 ~~~
 {: .source}
 
@@ -57,7 +56,7 @@ $ pwd
 You should see the output: 
 
 ~~~
-/home/dcuser  
+/home/users/courses/molepi30
 ~~~
 {: .output}
 
@@ -114,7 +113,7 @@ dc_workshop/results:
 
 Reference sequences (including many pathogen genomes) are available at [NCBI's refseq database](https://www.ncbi.nlm.nih.gov/refseq/)
 
-A reference genome is a genome that was previously sequenced and is closely related to the isolates we would like to analyse. The selection of a closely related reference genome is not trivial and can warrant an analysis in itself. However, for simplicity, here we will work with the *M. tuberculosis* reference genome H37Rv.
+A reference genome is a genome that was previously sequenced and is closely related to the isolates we would like to analyse. The selection of a closely related reference genome is not trivial and will warrant an analysis in itself. However, for simplicity, here we will work with the *M. tuberculosis* reference genome H37Rv.
 
 ### Download reference genomes from NCBI
 
@@ -127,8 +126,8 @@ $ cd dc_workshop/data
 ~~~
 {: .source}
 
-
-With curl we use the -O flag, which simultaneously tells curl to download the page instead of showing it to us and specifies that it should save the file using the same name it had on the server:
+The reference genome will be downloaded programmatically from NCBI with cURL which is used to download content from the internet.
+With cURL we use the -O flag, which simultaneously tells cURL to download the page instead of showing it to us and specifies that it should save the file using the same name it had on the server. Another option to programmatically download from the command line is wget which we will encounter later on:
 
 ~~~
 $ curl -O ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/955/GCF_000195955.2_ASM19595v2/GCF_000195955.2_ASM19595v2_genomic.fna.gz
@@ -136,7 +135,7 @@ $ curl -O ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/955/GCF_000195955.2
 {: .source}
 
 
-This file is compressed (gunzipped) as indicated by the extension of ".gz". It means that this file has been compressed using the "gzip" command.
+This file is compressed as indicated by the extension of ".gz". It means that this file has been compressed using the "gzip" command.
 
 Extract the file by typing
 
@@ -158,24 +157,25 @@ GCF_000195955.2_ASM19595v2_genomic.fna
 {: .output}
 
 
-> ## Challenge: How big is the genome?
+> ## Challenge: What is the size of the genome?
 >
-> Find out how many basepairs the genome has. Hints:
+> Find out how many basepairs the genome has. Hints: 
 > ~~~
-> wc [filename]
+> infoalign
 > ~~~
-> gives information on size.
+> gives basic information of a fasta file
 > ~~~
-> $ grep pattern [filename]
-> ~~~
-> selects lines in files that match patterns
 >
 > > ## Solution
-> >
-> > 
+> > $ infoalign GCF_000195955.2_ASM19595v2_genomic.fna
+> > Display basic information about a multiple sequence alignment
+> >   Output file [2_asm19595v2_genomic.infoalign]: (press Enter)
+> >  head 2_asm19595v2_genomic.infoalign
+> > # USA             Name        SeqLen	AlignLen	Gaps	GapLen	Ident	Similar	Differ	% Change	Weight	Description 
+> > fasta::GCF_000195955.2_ASM19595v2_genomic.fna:NC_000962.3	NC_000962.3   4411532	4411532	0	0	4411532	0	0	0.000000	1.000000	Mycobacterium tuberculosis H37Rv, complete genome
 > > ~~~
-> > $ grep -v '>' GCF_000195955.2_ASM19595v2_genomic.fna| 
-> > 4466677
+> > 
+> > 4411532
 > > ~~~
 > > {: .output}
 > {: .solution}
@@ -208,15 +208,10 @@ There are many repositories for public data. Some model organisms or fields have
 Let's download our *M. tuberculosis* data with
 
 ~~~
-$ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR029/ERR029207/*fastq.gz
-$ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR029/ERR029206/*fastq.gz
-$ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR026/ERR026478/*fastq.gz
-
-$ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR026/ERR026474/*fastq.gz
-$ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR026/ERR026473/*fastq.gz
-
-$ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR026/ERR026481/*fastq.gz
-$ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR026/ERR026482/*fastq.gz
+$ for i in ERR029/ERR029207 ERR029/ERR029206 ERR026/ERR026478 ERR026/ERR026474 ERR026/ERR026473 ERR026/ERR026481 ERR026/ERR026482
+$   do
+$   wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/"$i"/*fastq.gz
+$   done
 ~~~
 {: .source}
 
