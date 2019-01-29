@@ -208,14 +208,18 @@ There are many repositories for public data. Some model organisms or fields have
 Let's download our *M. tuberculosis* data with
 
 ~~~
-$ for i in ERR029/ERR029207 ERR029/ERR029206 ERR026/ERR026478 ERR026/ERR026474 ERR026/ERR026473 ERR026/ERR026481 ERR026/ERR026482
-$   do
-$   wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/"$i"/*fastq.gz
-$   done
+$ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR029/ERR029207/*fastq.gz
+$ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR029/ERR029206/*fastq.gz
+$ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR026/ERR026478/*fastq.gz
+$ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR026/ERR026474/*fastq.gz
+$ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR026/ERR026473/*fastq.gz
+$ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR026/ERR026481/*fastq.gz
+$ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR026/ERR026482/*fastq.gz
+
 ~~~
 {: .source}
 
-This will take a moment and might run over night. We will therefore detach the session to work further.
+This will run over night. We will therefore detach the session to work further.
 
 **Detach session (process keeps running in background)**
 
