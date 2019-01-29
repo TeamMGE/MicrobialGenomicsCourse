@@ -3,7 +3,7 @@ title: "SNP phylogeny"
 teaching: 15
 exercises: 90
 questions:
-- "How can a phylogenetic tree be produced?"
+- "How to generate a phylogenetic tree from SNP data?"
 objectives:
 - "Map reads against a reference genome"
 - "Extract single nucleotide polymorphisms"
@@ -175,7 +175,7 @@ Our output in phylip format was written to 'core.aln'. But let's have a look at 
 
 ## Phylogenetic tree  
 
-Phylogenetic trees have been discussed during the lecture. We will here establish a phylogenetic tree 
+Phylogenetic trees have been discussed during the lectures. We will here establish a phylogenetic tree 
 from the file 'core.aln' with PhyML. PhyML is a phylogeny software based on the maximum-likelihood 
 principle. Since the original [publication](https://www.ncbi.nlm.nih.gov/pubmed/14530136), PhyML has been widely used 
 and cited. There is a range of parameters that need to be chosen, such as  nucleotide or amino-acid substitution model 
