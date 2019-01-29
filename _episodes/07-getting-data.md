@@ -170,12 +170,11 @@ GCF_000195955.2_ASM19595v2_genomic.fna
 > ~~~
 > selects lines in files that match patterns
 >
-
 > > ## Solution
 > >
 > > 
 > > ~~~
-> > $ grep -v '>' GCF_000195955.2_ASM19595v2_genomic.fna| wc -m
+> > $ grep -v '>' GCF_000195955.2_ASM19595v2_genomic.fna| 
 > > 4466677
 > > ~~~
 > > {: .output}
