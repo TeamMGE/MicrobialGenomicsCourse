@@ -37,7 +37,7 @@ window.onload = set_page_view_defaults;
 
 ##  Logging into a Linux Server
 
-To access the pre-configured workshop data, you'll need to use our log-in credentials (user name and password). A user name will be assigned to you at the workshop. In the following, always replace dcuser with your user name 
+To access the pre-configured workshop data, you'll need to use our log-in credentials (user name and password). A username will be assigned to you at the workshop. In the following, always replace dcuser with your user name 
 and the password with the password assigned to you.
 
 **Log-in Credentials (case-sensitive!)**
@@ -46,10 +46,10 @@ and the password with the password assigned to you.
 - Password: password
 
 But first, you need a place to log *into*! To find the server that holds your data,
-you'll need something called an IP address. Your instructor should have given this to you
+you'll need the host name of the server. Your instructor should have given this to you
 at the beginning of the workshop.
 
-An IP address is essentially the numerical version of a web address like www.google.com
+A hostname is a label that is assigned to a device connected to a computer network and that is used to identify the server.
 
 ## Connection Protocols
 
