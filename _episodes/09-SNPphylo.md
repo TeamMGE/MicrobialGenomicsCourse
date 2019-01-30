@@ -207,8 +207,8 @@ and let's rename our resulting tree.
 ~~~
 
 $ mkdir tree
-$ mv core.aln_phyml_stats.txt tree/
-$ mv core.aln_phyml_tree.txt tree/core_snps.newick
+$ mv core.aln_phyml_stats tree/
+$ mv core.aln_phyml_tree tree/core_snps.newick
 ~~~
 {: .bash}
 
