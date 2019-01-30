@@ -123,7 +123,7 @@ A core site can have the same nucleotide in every sample (monomorphic) or some s
 SNIPPY will concatenate the core SNPs, i.e. ignoring sites that are identical in all isolates and in the reference.
 
 The '--noref' argument tells SNIPPY to exclude the reference from the alignment.  
-The '--aformat' argument determines the alignment output format. We need a phylip format as input our next tool
+The '--aformat' argument determines the alignment output format. We need a phylip format as input for our next tool.
 
 ~~~
 $ cd ~/dc_workshop/results/snps/
