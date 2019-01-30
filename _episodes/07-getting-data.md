@@ -7,9 +7,11 @@ questions:
 - "How and where can data be downloaded?"
 objectives:
 - "Create a file system for a bioinformatics project."
+- "Download files necessary for further analysis."
 - "Use 'for' loops to automate operations on multiple files"
 keypoints:
-- "Wget and Curl are two different ways to get data from the internet"
+- "Wget is a computer program to get data from the internet"
+- "screen can be used to run a program even when the user is disconnected" 
 - "'for' loops let you perform the same set of operations on multiple files with a single command"
 - "Sequencing data is large"
 ---
@@ -108,12 +110,12 @@ dc_workshop/results:
 {: .output}
 
 
-
 ## Selection of a reference genome
 
 Reference sequences (including many pathogen genomes) are available at [NCBI's refseq database](https://www.ncbi.nlm.nih.gov/refseq/)
 
 A reference genome is a genome that was previously sequenced and is closely related to the isolates we would like to analyse. The selection of a closely related reference genome is not trivial and will warrant an analysis in itself. However, for simplicity, here we will work with the *M. tuberculosis* reference genome H37Rv.
+
 
 ### Download reference genomes from NCBI
 
@@ -126,11 +128,10 @@ $ cd dc_workshop/data
 ~~~
 {: .source}
 
-The reference genome will be downloaded programmatically from NCBI with cURL which is used to download content from the internet.
-With cURL we use the -O flag, which simultaneously tells cURL to download the page instead of showing it to us and specifies that it should save the file using the same name it had on the server. Another option to programmatically download from the command line is wget which we will encounter later on:
+The reference genome will be downloaded programmatically from NCBI with Wget. Wget is a computer program that retrieves content from web servers.  Its name derives from World Wide Web and get.
 
 ~~~
-$ curl -O ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/955/GCF_000195955.2_ASM19595v2/GCF_000195955.2_ASM19595v2_genomic.fna.gz
+$ wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/195/955/GCF_000195955.2_ASM19595v2/GCF_000195955.2_ASM19595v2_genomic.fna.gz
 ~~~
 {: .source}
 
@@ -184,7 +185,7 @@ GCF_000195955.2_ASM19595v2_genomic.fna
 
 There are a few ways to keep cloud processes running in the background. Many times when we refer to a background process we are talking about what is described at this tutorial - running a command and returning to shell prompt. Here we describe a program that will allow us to run our entire shell and keep that process running even if we disconnect.
 
-## Starting and attaching to screen sessions
+## Screen sessions
 
 ### Starting a new session
 
@@ -193,35 +194,14 @@ A ‘session’ can be thought of as a window for screen, you might open an term
 ~~~
 $ screen -S session_name
 ~~~
-{: .source}
+{: .bash}
 
-This creates a session with the name ‘session_name’
+This creates a session with the name ‘session_name’.
 
 As you work, this session will stay active until you close this session. Even if you disconnect from your machine, the jobs you start in this session will run till completion.
 
 
-## Download the sequenced genomes from the European Nucleotide Archive (ENA)
-
-`wget` is short for “world wide web get”, and it’s basic function is to download web pages or data at a web address.
-There are many repositories for public data. Some model organisms or fields have specific databases, and there are ones for particular types of data. Two of the most comprehensive are the National Center for Biotechnology Information (NCBI) and European Nucleotide Archive (EMBL-EBI). In this lesson we’re working with the ENA, but the general process is the same for any database.
-
-Let's download our *M. tuberculosis* data with
-
-~~~
-$ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR029/ERR029207/*fastq.gz
-$ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR029/ERR029206/*fastq.gz
-$ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR026/ERR026478/*fastq.gz
-$ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR026/ERR026474/*fastq.gz
-$ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR026/ERR026473/*fastq.gz
-$ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR026/ERR026481/*fastq.gz
-$ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR026/ERR026482/*fastq.gz
-
-~~~
-{: .source}
-
-This will run over night. We will therefore detach the session to work further.
-
-**Detach session (process keeps running in background)**
+### Detach session (process keeps running in background)
 
 You can detach from a session by pressing `control + a` followed by `d` (for detach) on your keyboard.
 If you reconnect the next day to your machine, you will also have to reconnect to your session to see how it went.
@@ -255,29 +235,18 @@ If you reconnect the next day to your machine, you will also have to reconnect t
 > {: .bash}
 {: .callout}
 
-After the download finished, let's have a look at the files
+
+## Loops
+
+*Loops* are key to productivity improvements through automation as they allow us to execute commands repeatedly. Similar to wildcards and tab completion, using loops also reduces the amount of typing (and typing mistakes). Our next task is to download our [data](https://aschuerch.github.io/MolecularEpidemiology_AnalysisWGS/01-intro/index.html) from the short read archive [(SRA) at the European Nucleotide Archive (ENA)](https://www.ebi.ac.uk/ena). There are many repositories for public data. Some model organisms or fields have specific databases, and there are ones for particular types of data. Two of the most comprehensive are the National Center for Biotechnology Information (NCBI) and European Nucleotide Archive (EMBL-EBI). In this lesson we’re working with the ENA, but the general process is the same for any database.
+
+
+We can do this one by one but given that each download takes about one to two hours, this could keep us up all night. Instead of downloading one by one we can apply a loop. Let's see what that looks like and then we'll discuss what we're doing with each line of our loop.
 
 ~~~
-$ ls
-~~~
-{: .source}
-
-~~~
-ERR026473_1.fastq.gz  ERR026478_1.fastq.gz  ERR026482_1.fastq.gz  ERR029207_1.fastq.gz
-ERR026473_2.fastq.gz  ERR026478_2.fastq.gz  ERR026482_2.fastq.gz  ERR029207_2.fastq.gz
-ERR026474_1.fastq.gz  ERR026481_1.fastq.gz  ERR029206_1.fastq.gz  GCF_000195955.2_ASM19595v2_genomic.fna
-ERR026474_2.fastq.gz  ERR026481_2.fastq.gz  ERR029206_2.fastq.gz
-~~~
-{: .output}
-
-All new files start with ERR and have an fastq.gz extension. It means they are in fastq format and compressed. Let's uncompress with a  `for` loop to iterate through all of
-our `.gz` files. Let's see what that looks like and then we'll 
-discuss what we're doing with each line of our loop.
-
-~~~
-$ for filename in *.gz
+$ for filename in ERR026473 ERR026474 ERR026478 ERR026481 ERR026482 ERR029206 ERR029207
 > do
-> gunzip $filename
+> wget ftp://ftp.sra.ebi.ac.uk/"${filename}".fastq.gz
 > done
 ~~~
 {: .bash}
@@ -294,15 +263,19 @@ The `$` tells the shell interpreter to treat
 the **variable** as a variable name and substitute its value in its place,
 rather than treat it as text or an external command. 
 
-In this example, the list is fourteen filenames (one filename for each of our `.gz` files).
+In this example, the list is seven filenames/
 Each time the loop iterates, it will assign a file name to the variable `filename`
-and run the `gunzip` command.
+and run the `wget` command.
 The first time through the loop,
-`$filename` is `ERR026473_1.fastq.gz`. 
-The interpreter runs the command `gunzip` on `ERR026473_1.fastq.gz`.
+`$filename` is `ERR026473.fastq.gz`. 
+The interpreter runs the command `wget` on `ERR026473.fastq.gz` at the server ftp://ftp.sra.ebi.ac.uk/
 For the second iteration, `$filename` becomes 
-`ERR026473_2.fastq.gz`. This time, the shell runs `gunzip` on `ERR026473_2.fastq.gz`.
-It then repeats this process for the four other `.gz` files in our directory.
+`ERR026473.fastq.gz`. This time, the shell runs `wget` on `ERR026473.fastq.gz`.
+
+Use {} to wrap the variable so that .fastq.gz will not be interpreted as part of the variable name. In addition, quoting the shell variables is a good practice AND necessary if your variables have spaces in them.
+
+For more, check [Bash Pitfalls](http://mywiki.wooledge.org/BashPitfalls)
+
 
 > ## Follow the Prompt
 >
@@ -332,9 +305,9 @@ The shell itself doesn't care what the variable is called;
 if we wrote this loop as:
 
 ~~~
-$ for x in *.gz
+$ for x in ERR026473 ERR026474 ERR026478 ERR026481 ERR026482 ERR029206 ERR029207
 > do
-> gunzip $x
+> wget ftp://ftp.sra.ebi.ac.uk/"${x}".fastq.gz
 > done
 ~~~
 {: .bash}
@@ -342,9 +315,9 @@ $ for x in *.gz
 or:
 
 ~~~
-$ for temperature in *.gz
+$ for temperature in ERR026473 ERR026474 ERR026478 ERR026481 ERR026482 ERR029206 ERR029207
 > do
-> gunzip $temperature
+> wget ftp://ftp.sra.ebi.ac.uk/"${temperature}".fastq.gz
 > done
 ~~~
 {: .bash}
@@ -359,13 +332,40 @@ increase the odds that the program won't do what its readers think it does.
 > The `for` loop is interpreted as a multipart command.  If you press the up arrow on your keyboard to recall the command, it will be shown like so:
 >
 > ~~~   
-> $ for filename in *.gz; unzip $gz; done
+> $ for filename in ERR026473 ERR026474 ERR026478 ERR026481 ERR026482 ERR029206 ERR029207; do wget ftp://ftp.sra.ebi.ac.uk/"${filename}".fastq.gz> done
 > ~~~
 > {: .bash}
 > 
 > When you check your history later, it will help your remember what you did!
 >
 {: .callout}
+
+
+
+## Download the sequenced genomes from the European Nucleotide Archive (ENA)
+
+The download takes a long time and will run over night. We will therefore run it within a screen session
+
+Let's start a new screen session 
+
+~~~
+$ screen -S download
+~~~
+{: .bash}
+
+
+Now, let's download our *M. tuberculosis* data with a for loop
+
+~~~
+$ for files in ERR029/ERR029207 ERR029/ERR029206 ERR026/ERR026478 ERR026/ERR026474 ERR026/ERR026473 ERR026/ERR026481 ERR026/ERR026482
+$ do 
+$ wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/"${files}"/*fastq.gz
+$ done
+~~~
+{: .bash}
+
+This will run over night. We will therefore detach the session to work further.
+
 
 
 {% include links.md %}
