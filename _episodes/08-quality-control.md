@@ -168,36 +168,6 @@ NACCGGTCCAGCGCGCCCAGATCGAGCCCGTCGAGTCGGTCAACCGAAGTCACCGAACTTGTTTACCACTCGCGCAATGC
 
 we can now see that the quality of an `N` is 4. 
 
-After the download finished, let's have a look at the files
-
-~~~
-$ ls
-~~~
-{: .source}
-
-~~~
-ERR026473_1.fastq.gz  ERR026478_1.fastq.gz  ERR026482_1.fastq.gz  ERR029207_1.fastq.gz
-ERR026473_2.fastq.gz  ERR026478_2.fastq.gz  ERR026482_2.fastq.gz  ERR029207_2.fastq.gz
-ERR026474_1.fastq.gz  ERR026481_1.fastq.gz  ERR029206_1.fastq.gz  GCF_000195955.2_ASM19595v2_genomic.fna
-ERR026474_2.fastq.gz  ERR026481_2.fastq.gz  ERR029206_2.fastq.gz
-~~~
-{: .output}
-
-
-
-
-
-
-All new files start with ERR and have an fastq.gz extension. It means they are in fastq format and compressed. Let's uncompress with a  `for` loop to iterate through all of
-our `.gz` files. 
-~~~
-$ for filename in *.gz
-> do
-> gunzip $filename
-> done
-~~~
-{: .bash}
-
 > ## Quality Encodings Vary
 >
 > Although we've used a particular quality encoding system to demonstrate interpretation of 
@@ -289,7 +259,7 @@ $ cd ~/dc_workshop/data/
 > {: .solution}
 {: .challenge}
 
-FastQC can accept multiple file names as input, so we can use the *.fastq wildcard to run FastQC on all of the FASTQ files in this directory.
+FastQC can accept multiple file names as input, so we can use the *.fastq wildcard to run FastQC on all of the FASTQ files in this directory. 
 
 ~~~
 $ fastqc *.fastq
