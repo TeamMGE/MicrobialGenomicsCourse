@@ -45,7 +45,7 @@ It is very fast but a single run of SNIPPY still takes about 10 to 12 minutes. W
 $ cd ~/dc_workshop/data/trimmed_fastq/
 $ for sample in ERR026473 ERR026474 ERR026478 ERR026481 ERR026482 ERR029206 ERR029207
 >  do
->  snippy  --outdir ~/dc_workshop/results/snps/$sample --ref ~/dc_workshop/data/GCF_000195955.2_ASM19595v2_genomic.fna --R1 "$sample"_1.fastq_trim.fastq --R2 "$sample"_2.fastq_trim.fastq
+>  snippy  --outdir ~/dc_workshop/results/snps/"${sample}" --ref ~/dc_workshop/data/GCF_000195955.2_ASM19595v2_genomic.fna --R1 "${sample}"_1.fastq_trim.fastq --R2 "${sample}"_2.fastq_trim.fastq
 >  done
 ~~~
 {: .bash}
