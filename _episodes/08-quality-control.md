@@ -15,6 +15,45 @@ keypoints:
 - "`for` loops let you perform the same set of operations on multiple files with a single command."
 ---
 
+Let's check if yesterday's download finished. Let's have a look at the files
+
+~~~
+$ ls
+~~~
+{: .source}
+
+~~~
+ERR026473_1.fastq.gz  ERR026478_1.fastq.gz  ERR026482_1.fastq.gz  ERR029207_1.fastq.gz
+ERR026473_2.fastq.gz  ERR026478_2.fastq.gz  ERR026482_2.fastq.gz  ERR029207_2.fastq.gz
+ERR026474_1.fastq.gz  ERR026481_1.fastq.gz  ERR029206_1.fastq.gz  GCF_000195955.2_ASM19595v2_genomic.fna
+ERR026474_2.fastq.gz  ERR026481_2.fastq.gz  ERR029206_2.fastq.gz
+~~~
+{: .output}
+
+
+All new files start with ERR and have an fastq.gz extension. It means they are in fastq format and compressed. Let's uncompress with a  `for` loop to iterate through all of our `.gz` files. 
+~~~
+$ for filename in *.gz
+> do
+> gunzip "${filename}"
+> done
+~~~
+{: .bash}
+
+
+> ## Discussion
+> 
+> Yesterday's 'for' loop contained 7 samples, but we got 14 samples.
+> Why is this? What is the difference between the two files that start with the same name? Discuss with your neighbour.
+> 
+> Hint: have a look at the 'head' of each of the files
+> 
+>> ## Solution
+>> Have a look at the Illumina website explaining [paired-end sequencing](https://www.illumina.com/science/technology/next-generation-sequencing/paired-end-vs-single-read-sequencing.html)
+> {: .solution}
+{: .challenge}
+
+
 # Bioinformatics workflows
 
 When working with high-throughput sequencing data, the raw reads you get off of the sequencer will need to pass
@@ -129,34 +168,35 @@ NACCGGTCCAGCGCGCCCAGATCGAGCCCGTCGAGTCGGTCAACCGAAGTCACCGAACTTGTTTACCACTCGCGCAATGC
 
 we can now see that the quality of an `N` is 4. 
 
+After the download finished, let's have a look at the files
 
-> ## Exercise
-> 
-> What is the last read in the `ERR026481_1.fastq` file? How confident
-> are you in this read? 
-> 
->> ## Solution
->> ~~~
->> $ tail -n4 ERR026481_1.fastq
->> ~~~
->> {: .bash}
->> 
->> ~~~
->> @ERR026481.2070321 IL10_5319:2:120:13022:20879#8/1
->> CGTCACCAGAGTTCAATCGTTGCANCNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
->> +
->> BCCAABBBBBBBBBBCCACCAAAA%<%%$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
->> ~~~
->> {: .output}
->> 
->> The second half of this read is of very poor quality. Many of the positions are unknown
->> (`N`s) and the bases that we do have guesses for are of very poor
->> quality (`#`). However, the beginning of the read is fairly high 
->> quality. We will look at variations in position-based quality
->> in just a moment.
->> 
-> {: .solution}
-{: .challenge}
+~~~
+$ ls
+~~~
+{: .source}
+
+~~~
+ERR026473_1.fastq.gz  ERR026478_1.fastq.gz  ERR026482_1.fastq.gz  ERR029207_1.fastq.gz
+ERR026473_2.fastq.gz  ERR026478_2.fastq.gz  ERR026482_2.fastq.gz  ERR029207_2.fastq.gz
+ERR026474_1.fastq.gz  ERR026481_1.fastq.gz  ERR029206_1.fastq.gz  GCF_000195955.2_ASM19595v2_genomic.fna
+ERR026474_2.fastq.gz  ERR026481_2.fastq.gz  ERR029206_2.fastq.gz
+~~~
+{: .output}
+
+
+
+
+
+
+All new files start with ERR and have an fastq.gz extension. It means they are in fastq format and compressed. Let's uncompress with a  `for` loop to iterate through all of
+our `.gz` files. 
+~~~
+$ for filename in *.gz
+> do
+> gunzip $filename
+> done
+~~~
+{: .bash}
 
 > ## Quality Encodings Vary
 >
