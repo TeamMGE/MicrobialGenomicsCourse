@@ -78,7 +78,7 @@ then we can go to the gff directory and start roary
 
 ~~~
 $ cd ~/dc_workshop/results/annotation/gff_files
-$ roary *.gff -f ~/dc_workshop/results/pangenome/
+$ roary *.gff -r -f ~/dc_workshop/results/pangenome/
 ~~~
 {: .bash}
 
@@ -94,7 +94,7 @@ screen -r pangenome
 
 > ## Discussion: Open or closed pangenome?
 > After roary finished, have a look at the summary file. How many core and pangenome genes are there? Visit the
-> definition of an open and closed pangenome [here](http://www.metagenomics.wiki/pdf/definition/pangenome). 
+> definition of an open and closed pangenome [here](http://www.metagenomics.wiki/pdf/definition/pangenome) and download and view the file "Rplots.pdf". 
 > Has *M. tuberculosis* a closed or an open pangenome?
 {: .discussion}
 
