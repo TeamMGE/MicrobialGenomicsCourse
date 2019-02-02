@@ -525,14 +525,18 @@ Notice that we needed to redirect the output to a file. If we don't do that, the
 >> `seqtk fqchk ERR026473_1.fastq | head -n 3`
 >>
 >> min_len: 108; max_len: 108; avg_len: 108.00; 33 distinct quality values
+>>
 >> POS	#bases	%A	%C	%G	%T	%N	avgQ	errQ	%low	%high
+>>
 >> ALL	229930596	17.9	32.2	32.3	17.4	0.2	29.7	20.6	6.9	93.1
 >>
 >> 2) 
 >> `seqtk fqchk ERR026473_1_trim.fastq | head -n 3`
 >>
 >> min_len: 30; max_len: 108; avg_len: 94.31; 33 distinct quality values
+>>
 >> POS	#bases	%A	%C	%G	%T	%N	avgQ	errQ	%low	%high
+>>
 >> ALL	200776204	17.9	32.2	32.2	17.6	0.0	31.2	28.5	1.3	98.7
 >> 
 > {: .solution}
