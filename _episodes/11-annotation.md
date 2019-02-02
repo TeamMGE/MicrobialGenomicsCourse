@@ -23,10 +23,10 @@ Now that we have assembled the data into contigs the next natural step to do is 
 Genome annotation includes prediction of protein-coding genes, as well as other functional genome units such as structural RNAs, tRNAs, small RNAs, pseudogenes, control regions, direct and inverted repeats, insertion sequences, transposons and other mobile elements. It starts by identifying open reading frames (ORFs). Predicted sequences are further analysed to search for similarity to known elements, for example with BLAST.
 
 
-Have a look at the 50 first lines of ERR029207.fna
+Have a look at the 3000 characters of ERR029207.fasta
 
 ~~~
-$ head -n50 /home/dcuser/dc_workshop/results/assembly/ERR029207/contigs.fasta
+$ head -c 3000 ~/dc_workshop/results/assembly/ERR029207.fasta
 ~~~
 {: .source}
 
@@ -53,7 +53,10 @@ A range of programs are available for these tasks but here we will use PROKKA, w
 
 PROKKA automates the process of locating ORFs and RNA regions on contigs, translating ORFs to protein sequences, searching for protein homologs and producing standard output files. For gene finding and translation, PROKKA makes use of the program Prodigal. Homology searching (via BLAST and HMMER) is then performed using the translated protein sequences as queries against a set of public databases (CDD, PFAM, TIGRFAM) as well as custom databases that come with PROKKA.
 
-The names of the contigs produced by SPades are quite long. PROKKA needs name which are shorter than 20 characters. We will therefore shorten these names first by making a copy of the contig files.
+
+## OPTIONAL: Only when using SPAdes assembler
+
+The names of the contigs produced by SPAdes are quite long. PROKKA needs name which are shorter than 20 characters. We will therefore shorten these names first by making a copy of the contig files.
 
 ~~~
 $ cd ~/dc_workshop/results/assembly/
@@ -139,6 +142,9 @@ $ grep  ">" ERR026473.fasta
 
 These are the last few lines of our output. Every line has a unique number.
 
+
+## Automated Annotation continued
+
 We still need to make a new folder to contain our annotation results.
 
 ~~~
@@ -184,15 +190,15 @@ $ cat annotation/anno_*/ERR*.txt
 > > ~~~
 > > $ grep CDS annotation/anno_*/ERR*.txt
 > >  
-> > annotation/anno_ERR026473/ERR026473.txt:CDS: 4073
-> > annotation/anno_ERR026474/ERR026474.txt:CDS: 4075
-> > annotation/anno_ERR026478/ERR026478.txt:CDS: 4068
-> > annotation/anno_ERR026481/ERR026481.txt:CDS: 4069
-> > annotation/anno_ERR026482/ERR026482.txt:CDS: 4067
-> > annotation/anno_ERR029206/ERR029206.txt:CDS: 4062
-> > annotation/anno_ERR029207/ERR029207.txt:CDS: 4071
+> > annotation/anno_ERR026473/ERR026473.txt:CDS: 4028
+> > annotation/anno_ERR026474/ERR026474.txt:CDS: 4024
+> > annotation/anno_ERR026478/ERR026478.txt:CDS: 4008
+> > annotation/anno_ERR026481/ERR026481.txt:CDS: 4024
+> > annotation/anno_ERR026482/ERR026482.txt:CDS: 4010
+> > annotation/anno_ERR029206/ERR029206.txt:CDS: 4036
+> > annotation/anno_ERR029207/ERR029207.txt:CDS: 4042
 > > 
-> > These *M. tuberculosis* genomes contain between 4067 and 4075 coding regions.
+> > These *M. tuberculosis* genomes contain between 4008 and 4042 coding regions.
 > > ~~~
 > > {: .output}
 > Is your solution the same or do you get other numbers of coding regions? What could be possible explanations 
