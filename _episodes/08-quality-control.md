@@ -626,7 +626,7 @@ ERR026478_1.fastq_trim.fastq  ERR026482_2.fastq_trim.fastq
 
 
 
-> ## Exercise
+> ## Challenge
 > Again, use seqtk fqchk to compare the untrimmed and trimmed reads of all samples. 
 > Note the number of bases '#bases' of the trimmed and untrimmed reads. 
 > Calculate the theoretical coverage of the genomes before and after trimming, 
@@ -637,7 +637,7 @@ ERR026478_1.fastq_trim.fastq  ERR026482_2.fastq_trim.fastq
 >
 > Hint:
 > Sum up forward and reverse reads!
->>
+>> ## Solution
 >> 1) 
 >> `seqtk fqchk ERR026473_1.fastq_trim.fastq | head -n 3`
 >>
