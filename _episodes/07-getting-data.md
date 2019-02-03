@@ -332,7 +332,7 @@ increase the odds that the program won't do what its readers think it does.
 > The `for` loop is interpreted as a multipart command.  If you press the up arrow on your keyboard to recall the command, it will be shown like so:
 >
 > ~~~   
-> $ for filename in ERR026473 ERR026474 ERR026478 ERR026481 ERR026482 ERR029206 ERR029207; do wget ftp://ftp.sra.ebi.ac.uk/"${filename}".fastq.gz> done
+> $ for filename in ERR026473 ERR026474 ERR026478 ERR026481 ERR026482 ERR029206 ERR029207; do wget ftp://ftp.sra.ebi.ac.uk/"${filename}".fastq.gz ; done
 > ~~~
 > {: .bash}
 > 
