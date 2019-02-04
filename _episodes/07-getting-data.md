@@ -246,7 +246,7 @@ We can do this one by one but given that each download takes about one to two ho
 ~~~
 $ for filename in ERR026473 ERR026474 ERR026478 ERR026481 ERR026482 ERR029206 ERR029207
 > do
-> wget ftp://ftp.sra.ebi.ac.uk/"${filename}".fastq.gz
+> echo ftp://ftp.sra.ebi.ac.uk/"${filename}".fastq.gz
 > done
 ~~~
 {: .bash}
@@ -307,7 +307,7 @@ if we wrote this loop as:
 ~~~
 $ for x in ERR026473 ERR026474 ERR026478 ERR026481 ERR026482 ERR029206 ERR029207
 > do
-> wget ftp://ftp.sra.ebi.ac.uk/"${x}".fastq.gz
+> echo ftp://ftp.sra.ebi.ac.uk/"${x}".fastq.gz
 > done
 ~~~
 {: .bash}
@@ -317,7 +317,7 @@ or:
 ~~~
 $ for temperature in ERR026473 ERR026474 ERR026478 ERR026481 ERR026482 ERR029206 ERR029207
 > do
-> wget ftp://ftp.sra.ebi.ac.uk/"${temperature}".fastq.gz
+> echo ftp://ftp.sra.ebi.ac.uk/"${temperature}".fastq.gz
 > done
 ~~~
 {: .bash}
@@ -332,7 +332,7 @@ increase the odds that the program won't do what its readers think it does.
 > The `for` loop is interpreted as a multipart command.  If you press the up arrow on your keyboard to recall the command, it will be shown like so:
 >
 > ~~~   
-> $ for filename in ERR026473 ERR026474 ERR026478 ERR026481 ERR026482 ERR029206 ERR029207; do wget ftp://ftp.sra.ebi.ac.uk/"${filename}".fastq.gz ; done
+> $ for filename in ERR026473 ERR026474 ERR026478 ERR026481 ERR026482 ERR029206 ERR029207; do echo ftp://ftp.sra.ebi.ac.uk/"${filename}".fastq.gz ; done
 > ~~~
 > {: .bash}
 > 
