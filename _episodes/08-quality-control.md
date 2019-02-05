@@ -585,11 +585,28 @@ $ ls
 {: .bash}
 
 ~~~
-SRR097977.fastq		    SRR098027.fastq_trim.fastq	SRR098283.fastq
-SRR097977.fastq_trim.fastq  SRR098028.fastq		SRR098283.fastq_trim.fastq
-SRR098026.fastq		    SRR098028.fastq_trim.fastq	SRR098283.fastq_trim.fastq_trim.fastq
-SRR098026.fastq_trim.fastq  SRR098281.fastq
-SRR098027.fastq		    SRR098281.fastq_trim.fastq
+2_asm19595v2_genomic.infoalign  ERR026478_2.fastq             ERR029206_1_fastqc.html
+ERR026473_1.fastq               ERR026478_2_fastqc.html       ERR029206_1_fastqc.zip
+ERR026473_1_fastqc.html         ERR026478_2_fastqc.zip        ERR029206_1.fastq_trim.fastq
+ERR026473_1_fastqc.zip          ERR026478_2.fastq_trim.fastq  ERR029206_2.fastq
+ERR026473_1.fastq_trim.fastq    ERR026473_1.fastq_trim.fastq_trim.fastq   ERR026481_1.fastq             
+ERR026473_2.fastq               ERR026481_1_fastqc.html       ERR029206_2_fastqc.zip
+ERR026473_2_fastqc.html         ERR026481_1_fastqc.zip        ERR029206_2.fastq_trim.fastq
+ERR026473_2_fastqc.zip          ERR026481_1.fastq_trim.fastq  ERR029207_1.fastq
+ERR026473_2.fastq_trim.fastq    ERR026481_2.fastq             ERR029207_1_fastqc.html
+ERR026474_1.fastq               ERR026481_2_fastqc.html       ERR029207_1_fastqc.zip
+ERR026474_1_fastqc.html         ERR026481_2_fastqc.zip        ERR029207_1.fastq_trim.fastq
+ERR026474_1_fastqc.zip          ERR026481_2.fastq_trim.fastq  ERR029207_2.fastq
+ERR026474_1.fastq_trim.fastq    ERR026482_1.fastq             ERR029207_2_fastqc.html
+ERR026474_2.fastq               ERR026482_1_fastqc.html       ERR029207_2_fastqc.zip
+ERR026474_2_fastqc.html         ERR026482_1_fastqc.zip        ERR029207_2.fastq_trim.fastq
+ERR026474_2_fastqc.zip          ERR026482_1.fastq_trim.fastq  GCF_000195955.2_ASM19595v2_genomic.fna
+ERR026474_2.fastq_trim.fastq    ERR026482_2.fastq             seqtk
+ERR026478_1.fastq               ERR026482_2_fastqc.html       test.txt
+ERR026478_1_fastqc.html         ERR026482_2_fastqc.zip        trimmed_fastq
+ERR026478_1_fastqc.zip          ERR026482_2.fastq_trim.fastq
+ERR026478_1.fastq_trim.fastq    ERR029206_1.fastq
+
 ~~~
 {: .output}
 
