@@ -8,7 +8,7 @@ objectives:
 - Log onto to a running server
 - Log off from a running server
 keypoints:
-- You can use
+- You can use putty to log in to a server
 - Logging off a server is not the same as turning off a server
 ---
 
