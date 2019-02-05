@@ -165,13 +165,17 @@ GCF_000195955.2_ASM19595v2_genomic.fna
 > infoalign
 > ~~~
 > gives basic information of a fasta file
-> ~~~
+> 
 >
 > > ## Solution
 > > $ infoalign GCF_000195955.2_ASM19595v2_genomic.fna
+> > 
 > > Display basic information about a multiple sequence alignment
+> > 
 > >   Output file [2_asm19595v2_genomic.infoalign]: (press Enter)
+> > 
 > >  head 2_asm19595v2_genomic.infoalign
+> > 
 > > # USA             Name        SeqLen	AlignLen	Gaps	GapLen	Ident	Similar	Differ	% Change	Weight	Description 
 > > fasta::GCF_000195955.2_ASM19595v2_genomic.fna:NC_000962.3	NC_000962.3   4411532	4411532	0	0	4411532	0	0	0.000000	1.000000	Mycobacterium tuberculosis H37Rv, complete genome
 > > ~~~
