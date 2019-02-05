@@ -250,7 +250,7 @@ $ cd ~/dc_workshop/data/
 >>-rw-rw-r-- 1 guest guest 813M Jun  9  2017 ERR029206_1.fastq
 >>-rw-rw-r-- 1 guest guest 813M Jun  9  2017 ERR029206_2.fastq
 >>-rw-rw-r-- 1 guest guest 751M Jun  9  2017 ERR029207_1.fastq
->>-rw-rw-r-- 1 guest guest 751M Jun  9  2017 ERR029207_2.fastqstq
+>>-rw-rw-r-- 1 guest guest 751M Jun  9  2017 ERR029207_2.fastq
 >> ~~~
 >> {: .output}
 >> 
