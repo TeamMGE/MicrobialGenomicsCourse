@@ -357,6 +357,7 @@ $ screen -S download
 Now, let's download our *M. tuberculosis* data with a for loop
 
 ~~~
+$ cd dc_workshop/data
 $ for files in ERR029/ERR029207 ERR029/ERR029206 ERR026/ERR026478 ERR026/ERR026474 ERR026/ERR026473 ERR026/ERR026481 ERR026/ERR026482
 > do 
 > wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/"${files}"/*fastq.gz
