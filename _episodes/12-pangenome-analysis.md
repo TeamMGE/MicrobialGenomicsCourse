@@ -10,6 +10,7 @@ objectives:
 keypoints:
 - "The microbial pangenome is the union of genes shared by genomes of interest."
 - "Roary is a pipeline to determine genes of the pangenome."
+- "A pangenome analysis results in a presence/absence table of genes of each genome"
 ---
 
 
