@@ -10,6 +10,7 @@ objectives:
 - "Make an estimation on the likelihood of transmission events"
 keypoints:
 - "Different genetic analysis methods can give different results"
+- "Genetic analyses methods must be chosen according to the biology of the organism: one size doesn't fit all"
 - "Genetic information can confirm or contradict the meta data"
 ---
 
