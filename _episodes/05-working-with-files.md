@@ -16,7 +16,7 @@ keypoints:
 - "You can view file contents using `less`, `cat`, `head` or `tail`."
 - "The commands `cp`, `mv`, and `mkdir` are useful for manipulating existing files and creating new directories."
 - "You can view file permissions using `ls -l` and change permissions using `chmod`."
-- "The `history` command and the up arrow on your keyboard can be used to repeat recently used commands."
+- "The up arrow on your keyboard can be used to repeat recently used commands."
 ---
 
 ## Working with Files
