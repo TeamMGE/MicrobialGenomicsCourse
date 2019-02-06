@@ -11,8 +11,9 @@ objectives:
 - "Clean FastQC reads for further analysis."
 - "Use `for` loops to automate operations on multiple files."
 keypoints:
+- "In bioinformatic workflows the output of one tool is the input of the other." 
+- "FastQC is used to judge the quality of sequencing reads."
 - "Data cleaning is an essential step in a genomics pipeline."
-- "`for` loops let you perform the same set of operations on multiple files with a single command."
 ---
 
 Let's check if yesterday's download finished. Let's have a look at the files
