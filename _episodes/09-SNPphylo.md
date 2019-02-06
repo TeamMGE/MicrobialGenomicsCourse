@@ -120,7 +120,7 @@ This list gives us information on every SNP that was found by SNIPPY when compar
 
 In order to compare the identified SNPs with each other we need to know if a certain position exists in all isolates.
 A core site can have the same nucleotide in every sample (monomorphic) or some samples can be different (polymorphic). 
-SNIPPY will concatenate the core SNPs, i.e. ignoring sites that are identical in all isolates and in the reference.
+SNIPPY will concatenate the core SNPs, i.e. ignoring sites that are monomorphic in all isolates and in the reference. Concatenation of the SNP sites reduces the size of the alignment considerably.
 
 The '--noref' argument tells SNIPPY to exclude the reference from the alignment.  
 The '--aformat' argument determines the alignment output format. We need a phylip format as input for our next tool.
