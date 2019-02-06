@@ -12,7 +12,7 @@ keypoints:
 - "Single nucleotide polymorphisms can be identified by mapping reads to a reference genome"
 - "Parameters for the analysis have to be selected based on expected outcomes for this organism"
 - "Concatenation of SNPs helps to reduce analysis volume"    
-- "Phylogenetic trees can be annotated with a bracket syntax in Newick format"
+- "Phylogenetic trees can be written with a bracket syntax in Newick format"
 ---
 
 In this episode we will try to pinpoint single nucleotide variants or single nucleotide polymorphism (SNPs) between our samples and the reference. The SNPs are determined by a process called read mapping in which they are aligned to the reference sequence.
