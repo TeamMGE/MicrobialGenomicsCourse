@@ -576,7 +576,7 @@ For more, check [Bash Pitfalls](http://mywiki.wooledge.org/BashPitfalls).
 There are no spaces before or after the `=`.
 
 Go ahead and run the for loop. It should take a few minutes for
-seqtk to run for each of our six input files. Once it's done
+seqtk to run for each of our fourteen input files. Once it's done
 running, take a look at your directory contents.
 
 ~~~
