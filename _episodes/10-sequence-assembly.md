@@ -116,20 +116,19 @@ You can now safely work on something else. The assembly will keep on running.
 > > ~~~
 > > $ grep -c '>'  ERR02*.fasta
 > > 
-> > ERR026473/contigs.fasta:390
-> > ERR026474/contigs.fasta:367
-> > ERR026478/contigs.fasta:296
-> > ERR026481/contigs.fasta:336
-> > ERR026482/contigs.fasta:345
-> > ERR029206/contigs.fasta:451
-> > ERR029207/contigs.fasta:458
+> > ERR026473.fasta:390
+> > ERR026474.fasta:367
+> > ERR026478.fasta:296
+> > ERR026481.fasta:336
+> > ERR026482.fasta:345
+> > ERR029206.fasta:451
+> > ERR029207.fasta:458
 > > ~~~
 > > {: .output}
 > {: .solution}
 {: .challenge}
 
 
-At the moment, all samples are called contigs.fasta. This is not ideal. In the next episode we will rename the assembled contigs before processing them further.
 
 
 {% include links.md %}
