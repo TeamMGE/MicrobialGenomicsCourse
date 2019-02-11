@@ -34,17 +34,17 @@ Here we have 7 tuberculosis patients that form three separate clusters of potent
 
 The three clusters consist of:
 
-    - Patient A1 - sample ERR029207
-    - Patient A2 - sample ERR029206
-    - Patient A3 - sample ERR026478
+    - Patient A1 (2011) - sample ERR029207
+    - Patient A2 (2011) - sample ERR029206
+    - Patient A3 (2008) - sample ERR026478
 
 
-    - Patient B1 - sample ERR026474
-    - Patient B2 - sample ERR026473
+    - Patient B1 (2001) - sample ERR026474
+    - Patient B2 (2012) - sample ERR026473
 
 
-    - Patient C1 - sample ERR026481
-    - Patient C2 - sample ERR026482
+    - Patient C1 (2011) - sample ERR026481
+    - Patient C2 (2016) - sample ERR026482
 
 The second goal of this practicum is to affirm or dispute the inferred transmissions by comparing the bacterial genomes with each other. We will do that by two strategies: by identifying SNPs between the genomes and by identifying variably present genes, and we will compare the results of the two methods.
 
