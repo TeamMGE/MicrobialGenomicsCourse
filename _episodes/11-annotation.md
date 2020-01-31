@@ -117,7 +117,7 @@ $ cat annotation/anno_*/ERR*.txt
 
 > ## Discussion: How big are the genomes??
 >
->Repeat the same exercise as described above with the key word 'bases' to see how large the sum of all contigs is (and by >approximation the genome) and fill into the [table](https://docs.google.com/spreadsheets>/d/1xjiliy_USyMwiyzEgWhpn8_109F7Z3jPM_f7Jp-lOb8/edit?usp=sharing) under the head 'Genome size'
+>Repeat the same exercise as described above with the key word 'bases' to see how large the sum of all contigs is (and by approximation the genome) and fill into the [table](https://docs.google.com/spreadsheets>/d/1xjiliy_USyMwiyzEgWhpn8_109F7Z3jPM_f7Jp-lOb8/edit?usp=sharing) under the head 'Genome size'
 {: .discussion}
 
 {% include links.md %}
