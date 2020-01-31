@@ -261,7 +261,6 @@ $ cd ~/dc_workshop/data/
 {: .challenge}
 
 FastQC can accept multiple file names as input, so we can use the *.fastq wildcard to run FastQC on all of the FASTQ files in this directory. 
-
 ~~~
 $ fastqc *.fastq
 ~~~
@@ -314,42 +313,36 @@ $ ls
 {: .bash}
 
 ~~~
-ERR026473_1.fastq       ERR026481_2_fastqc
-ERR026473_1_fastqc      ERR026481_2_fastqc.zip
+ERR026473_1.fastq       ERR026481_2_fastqc.html
+ERR026473_1_fastqc.html ERR026481_2_fastqc.zip
 ERR026473_1_fastqc.zip  ERR026482_1.fastq
-ERR026473_2.fastq       ERR026482_1_fastqc
-ERR026473_2_fastqc      ERR026482_1_fastqc.zip
+ERR026473_2.fastq       ERR026482_1_fastqc.html
+ERR026473_2_fastqc.html ERR026482_1_fastqc.zip
 ERR026473_2_fastqc.zip  ERR026482_2.fastq
-ERR026474_1.fastq       ERR026482_2_fastqc
-ERR026474_1_fastqc      ERR026482_2_fastqc.zip
+ERR026474_1.fastq       ERR026482_2_fastqc.html
+ERR026474_1_fastqc.html ERR026482_2_fastqc.zip
 ERR026474_1_fastqc.zip  ERR029206_1.fastq
-ERR026474_2.fastq       ERR029206_1_fastqc
-ERR026474_2_fastqc      ERR029206_1_fastqc.zip
+ERR026474_2.fastq       ERR029206_1_fastqc.html
+ERR026474_2_fastqc.html ERR029206_1_fastqc.zip
 ERR026474_2_fastqc.zip  ERR029206_2.fastq
-ERR026478_1.fastq       ERR029206_2_fastqc
-ERR026478_1_fastqc      ERR029206_2_fastqc.zip
+ERR026478_1.fastq       ERR029206_2_fastqc.html
+ERR026478_1_fastqc.html ERR029206_2_fastqc.zip
 ERR026478_1_fastqc.zip  ERR029207_1.fastq
-ERR026478_2.fastq       ERR029207_1_fastqc
-ERR026478_2_fastqc      ERR029207_1_fastqc.zip
+ERR026478_2.fastq       ERR029207_1_fastqc.html
+ERR026478_2_fastqc.html ERR029207_1_fastqc.zip
 ERR026478_2_fastqc.zip  ERR029207_2.fastq
-ERR026481_1.fastq       ERR029207_2_fastqc
-ERR026481_1_fastqc      ERR029207_2_fastqc.zip
+ERR026481_1.fastq       ERR029207_2_fastqc.html
+ERR026481_1_fastqc.html ERR029207_2_fastqc.zip
 ERR026481_1_fastqc.zip  GCF_000195955.2_ASM19595v2_genomic.fna
 ERR026481_2.fastq       trimmed_fastq
 
 ~~~
 {: .output}
 
-The html files are in each folder.
-
-~~~
-ls */*html
-~~~
-{: .output}
 
 
 For each input FASTQ file, FastQC has created a `.zip` file and a
-`.html` file within each folder. The `.zip` file extension indicates that this is 
+`.html` file. The `.zip` file extension indicates that this is 
 actually a compressed set of multiple output files. We'll be working
 with these output files soon. The `.html` file is a stable webpage
 displaying the summary report for each of our samples.
@@ -361,7 +354,7 @@ output files into a new directory within our `results/` directory.
 ~~~
 $ mkdir ~/dc_workshop/results/fastqc_untrimmed_reads
 $ mv *.zip ~/dc_workshop/results/fastqc_untrimmed_reads/
-$ mv *_fastqc ~/dc_workshop/results/fastqc_untrimmed_reads/
+$ mv *.html ~/dc_workshop/results/fastqc_untrimmed_reads/
 ~~~
 {: .bash}
 
@@ -379,7 +372,7 @@ If we were working on our local computers, we'd be able to display each of these
 HTML files as a webpage: 
  
 ~~~
-$ open ERR026473_1_fastqc/fastqc_report.html
+$ open ERR026473_1_fastqc.html
 ~~~
 {: .bash}
 
@@ -586,27 +579,24 @@ $ ls
 {: .bash}
 
 ~~~
-2_asm19595v2_genomic.infoalign  ERR026478_2.fastq             ERR029206_1_fastqc.html
-ERR026473_1.fastq               ERR026478_2_fastqc.html       ERR029206_1_fastqc.zip
-ERR026473_1_fastqc.html         ERR026478_2_fastqc.zip        ERR029206_1.fastq_trim.fastq
-ERR026473_1_fastqc.zip          ERR026478_2.fastq_trim.fastq  ERR029206_2.fastq
-ERR026473_1.fastq_trim.fastq    ERR026473_1.fastq_trim.fastq_trim.fastq   ERR026481_1.fastq             
-ERR026473_2.fastq               ERR026481_1_fastqc.html       ERR029206_2_fastqc.zip
-ERR026473_2_fastqc.html         ERR026481_1_fastqc.zip        ERR029206_2.fastq_trim.fastq
-ERR026473_2_fastqc.zip          ERR026481_1.fastq_trim.fastq  ERR029207_1.fastq
-ERR026473_2.fastq_trim.fastq    ERR026481_2.fastq             ERR029207_1_fastqc.html
-ERR026474_1.fastq               ERR026481_2_fastqc.html       ERR029207_1_fastqc.zip
-ERR026474_1_fastqc.html         ERR026481_2_fastqc.zip        ERR029207_1.fastq_trim.fastq
-ERR026474_1_fastqc.zip          ERR026481_2.fastq_trim.fastq  ERR029207_2.fastq
-ERR026474_1.fastq_trim.fastq    ERR026482_1.fastq             ERR029207_2_fastqc.html
-ERR026474_2.fastq               ERR026482_1_fastqc.html       ERR029207_2_fastqc.zip
-ERR026474_2_fastqc.html         ERR026482_1_fastqc.zip        ERR029207_2.fastq_trim.fastq
-ERR026474_2_fastqc.zip          ERR026482_1.fastq_trim.fastq  GCF_000195955.2_ASM19595v2_genomic.fna
-ERR026474_2.fastq_trim.fastq    ERR026482_2.fastq             seqtk
-ERR026478_1.fastq               ERR026482_2_fastqc.html       test.txt
-ERR026478_1_fastqc.html         ERR026482_2_fastqc.zip        trimmed_fastq
-ERR026478_1_fastqc.zip          ERR026482_2.fastq_trim.fastq
-ERR026478_1.fastq_trim.fastq    ERR029206_1.fastq
+2_asm19595v2_genomic.infoalign	        ERR026481_2.fastq_trim.fastq
+ERR026473_1.fastq	                      ERR026482_1.fastq
+ERR026473_1.fastq_trim.fastq	          ERR026482_1.fastq_trim.fastq
+ERR026473_1.fastq_trim.fastq_trim.fastq	ERR026482_2.fastq
+ERR026473_2.fastq	                      ERR026482_2.fastq_trim.fastq
+ERR026473_2.fastq_trim.fastq	          ERR029206_1.fastq
+ERR026474_1.fastq	                      ERR029206_1.fastq_trim.fastq
+ERR026474_1.fastq_trim.fastq	          ERR029206_2.fastq
+ERR026474_2.fastq	                      ERR029206_2.fastq_trim.fastq
+ERR026474_2.fastq_trim.fastq	          ERR029207_1.fastq
+ERR026478_1.fastq	                      ERR029207_1.fastq_trim.fastq
+ERR026478_1.fastq_trim.fastq	          ERR029207_2.fastq
+ERR026478_2.fastq	                      ERR029207_2.fastq_trim.fastq
+ERR026478_2.fastq_trim.fastq	          GCF_000195955.2_ASM19595v2_genomic.fna
+ERR026481_1.fastq	                      seqtk
+ERR026481_1.fastq_trim.fastq	          test.txt
+ERR026481_2.fastq	                      trimmed_fastq
+
 
 ~~~
 {: .output}
@@ -625,7 +615,6 @@ our extra, double-trimmed file for the `ERR026473_1` sample.
 $ cd ~/dc_workshop/data/
 $ mkdir trimmed_fastq
 $ rm ERR026473_1.trim.fastq_trim.fastq
-$ rm ERR026473_1_trim.fastq 
 $ mv *_trim* trimmed_fastq
 $ cd trimmed_fastq
 $ ls
