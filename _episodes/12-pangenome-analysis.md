@@ -32,7 +32,7 @@ For this, we need to find if the genes are present in the annotated files.
 >
 > Hints:
 > ~~~
-> grep -A 10 [gene] *gbk 
+> grep -A 10 [gene] *faa 
 > gives you the first ten line after the gene name was found
 > ~~~
 > > ## Solution
