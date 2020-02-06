@@ -23,7 +23,7 @@ Now that we have assembled the data into contigs the next natural step to do is 
 Genome annotation includes prediction of protein-coding genes, as well as other functional genome units such as structural RNAs, tRNAs, small RNAs, pseudogenes, control regions, direct and inverted repeats, insertion sequences, transposons and other mobile elements. It starts by identifying open reading frames (ORFs). Predicted sequences are further analysed to search for similarity to known elements, for example with BLAST.
 
 
-Have a look at the 3000 characters of ERR029207.fasta
+Have a look at the first 3000 characters of ERR029207.fasta
 
 ~~~
 $ head -c 3000 ~/dc_workshop/results/assembly/ERR029207.fasta
