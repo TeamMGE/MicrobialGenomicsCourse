@@ -68,7 +68,7 @@ The parameter --prefix assigns the sample name as a prefix to all files. If we o
 ~~~
 $ for sample in ERR026473 ERR026474 ERR026478 ERR026481 ERR026482 ERR029206 ERR029207
 >  do
->  prokka --outdir annotation/anno_"${sample}" --prefix $sample assembly/"${sample}".fasta
+>  prokka --outdir annotation/anno_"${sample}" --prefix "${sample}" assembly/"${sample}".fasta
 >  done
 ~~~
 {: .bash}
