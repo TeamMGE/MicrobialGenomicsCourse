@@ -34,7 +34,7 @@ An FTP client will help you transfer files easily between your computer and the 
 - Click and the button and install Chrome
 
 ### Dendroscope
-- Download Dendroscope 3 [here](http://ab.inf.uni-tuebingen.de/data/software/dendroscope3/download/welcome.html).
+- Download Dendroscope 3 [here](https://software-ab.informatik.uni-tuebingen.de/download/dendroscope/welcome.html).
 - Chose the download link appropriate to your system
 - To use it, double-click on the downloaded file
 - Follow any installation instructions, if any
