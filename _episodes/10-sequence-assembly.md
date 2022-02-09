@@ -106,16 +106,18 @@ You can now safely work on something else. The assembly will keep on running.
 >
 > Hint:
 > ~~~
-> $ grep -c
+> $ infoalign
 > ~~~
-> prints a count of matching lines for each input file.
+> prints information about a sequencing file
 > 
+>
 > > ## Solution
 > >
 > > 
 > > ~~~
-> > $ grep -c '>'  ERR02*.fasta
-> > 
+> > infoalign ERR026473.fasta
+> > wc -l infoalign err026743.fasta
+> > ...
 > > ERR026473.fasta:390
 > > ERR026474.fasta:367
 > > ERR026478.fasta:296
