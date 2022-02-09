@@ -22,7 +22,7 @@ In the first case, we compared our isolates to a reference genome and clustered 
 ![workflow](../fig/Workflow.png)
 
 
-Now we will visualize and compare these two trees with each other. For that we will be using [Dendroscope](http://dendroscope.org/) which is a tree viewer that allows to make tanglegrams (showing and comparing two trees). Make sure you have both newick files (accessory_binary_genes.fa.newick and core_snps.newick) on your own computer. 
+Now we will visualize and compare these two trees with each other. For that we will be using [Dendroscope](http://dendroscope.org/) which is a tree viewer that allows to make tanglegrams (showing and comparing two trees). Make sure you have both newick files ([accessory_binary_genes.fa.newick](../files/accessory_binary_genes.fa.newick) and [core_snps.newick](../files/core_snps.newick)) on your own computer. 
 
 On your own computer, open Dendroscope 3.
 
@@ -47,13 +47,13 @@ Go to Algorithms > Tanglegram. This will show you which samples have the same na
 
 Visualization is frequently used to aid the interpretation of complex datasets. Within microbial genomics, visualizing the relationships between multiple genomes as a tree provides a framework onto which associated data (geographical, temporal, phenotypic and epidemiological) are added to generate hypotheses and to explore the dynamics of the system under investigation.
 
-Download the meta data [file](../files/meta.csv) to your computer. Open Chrome. Go to [microreact](https://microreact.org/). Click on 'Upload'. Upload the newick tree produced by SNP typing **or** by the pangenome analysis and the metadata file.
+Download the meta data [file](../files/meta.csv) to your computer. Open Chrome. Go to [microreact](https://microreact.org/). Click on 'Upload'. Upload the newick tree produced by SNP typing ([core_snps.newick](../files/core_snps.newick)) **or** by the pangenome analysis ([core_snps.newick](../files/core_snps.newick)) and the metadata file.
 
 Explore the location, time and further meta data.
 
 > ## Discussion
 >
-> 1. Which transmission events are likely based on the meta data alone?
+> 1. Which transmission events are likely based on the metadata alone?
 > 2. Which transmission events are likely based on the SNP or pangenome data?
 > 3. Draw a transmission tree where possible.
 {: .discussion}
