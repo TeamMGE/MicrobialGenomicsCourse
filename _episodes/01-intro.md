@@ -54,8 +54,7 @@ Cluster 3
     - Patient C1 (2011) - sample ERR026481
     - Patient C2 (2016) - sample ERR026482
 
-The second goal of this practicum is to affirm or dispute the inferred transmissions by comparing the bacterial genomes with each other. We will do that by two strategies: by identifying SNPs between the genomes and by identifying variably present genes, and we will compare the results of the two methods.
-
+The second goal of this practicum is to affirm or dispute the inferred transmissions by comparing the bacterial genomes with each other. We will do that by identifying SNPs between the genomes. If time allows a different strategy can be employed as well: identifying variably present genes.
 
 
 {% include links.md %}
