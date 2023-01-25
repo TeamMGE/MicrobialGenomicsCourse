@@ -12,9 +12,9 @@ and partially based on the [Data Carpentry Genomics lesson]({{ site.dc_site }}).
 
 > ## Schedule computer practical
 >
-> 0.  Tuesday, 13.00 - 17.00: Intro to data and the command line, downloading data
-> 1.  Wednesday, 9.30 - 12.15: Trimming, SNP-based phylogeny, assembly
-> 2.  Thursday, 9.30 - 12.15: Annotation, pangenome analysis, visualizations, conclusions
+> 0.  Tuesday, 9.30 - 12.15: Intro to data and the command line, downloading data
+> 1.  Tuesday, 13.45 - 17.00: Trimming, SNP-based phylogeny, assembly
+> 2.  Wednesday, 9.30 - 12.15: Visualizations, conclusions
 {: .checklist}
 
 > ## Data
