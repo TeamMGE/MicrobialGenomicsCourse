@@ -1,7 +1,7 @@
 ---
 title: "Introduction"
 start: true
-teaching: 10
+teaching: 20
 exercises: 0
 questions:
 - "What are the goals of this practical training?"
