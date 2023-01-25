@@ -1,6 +1,6 @@
 ---
 title: "Assessing Read Quality and Trimming"
-start: true
+start: false
 teaching: 30
 exercises: 20
 questions:
