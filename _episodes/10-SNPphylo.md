@@ -233,12 +233,11 @@ This does not look much like a tree yet. The tree is written in a bracket annota
 
 ## Visualization of phylogenetic trees
 
-We will be using [Dendroscope](http://dendroscope.org/) to view the phylogenetic tree established from the core SNPs. Dendroscope is a tree viewer which allows to edit the trees and zoom in and out.
+We will be using [iTOL](https://itol.embl.de/) to view the phylogenetic tree established from the core SNPs. iTOL is a tree viewer which allows to display, annotate and management of phylogenetic and other trees, especially very large tree. First, download the core_snps.newick file to your own computer, then go to [iTOL](https://itol.embl.de/) and upload your tree. Do play around with the different tree visualization options ('MODE') until you find a clear clustering.
 
 
-> ## Challenge: Which isolates are related based on core SNPs??
+> ## Challenge: Which isolates are related based on core SNPs?
 > 
-> Open Dendroscope on your own computer, go to File>Open and choose core_snps.newick
 > Try to make three groups out of the 7 isolates.
 > 
 > > ## Solution
@@ -255,10 +254,6 @@ We will be using [Dendroscope](http://dendroscope.org/) to view the phylogenetic
 {: .challenge}
 
 > ## Discussion: What is the SNP distance between the isolates??
-> 
-> Open Dendroscope on your own computer, go to File>Open and choose core_snps.newick.
-> Choose the rectangular phylogram.
-> Try to estimate the number of SNPs between the samples in the three groups by looking at the tree and by interrogating the SNIPPY output.
 > 
 > Hint:
 > Have a look at the file 'core.aln'
