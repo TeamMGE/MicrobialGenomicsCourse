@@ -21,6 +21,7 @@ and partially based on the [Data Carpentry Genomics lesson]({{ site.dc_site }}).
 >
 > This computer practical uses data from [this publication](https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-13-110)
 > We are using [this](https://docs.google.com/document/d/19A_srUEBTkP3XOBUIzBwneC6-ORsexMxadwCRaLG_UU/edit?usp=sharing) collaborative document.
+> A [cheat sheet](files/cheatsheet.pdf) of the used Linux commands is available.
 {: .prereq}
 
 
