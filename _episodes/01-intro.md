@@ -1,6 +1,6 @@
 ---
 title: "Introduction"
-start: true
+start: false
 teaching: 20
 exercises: 0
 questions:
