@@ -68,17 +68,17 @@ description of each step.
 
 1. Quality control - Assessing quality using FastQC
 2. Quality control - Trimming and/or filtering reads (if necessary)
-3. Align reads to reference genome 
-4. Variant calling
-5. Clustering variants
+3. Align reads to reference genome - Snippy
+4. Variant calling - Snippy
+5. Clustering variants - iTOL
 
-3. Assembly
-4. Annotation
-5. Pangenome analysis
-6. Clustering presence and absence of genes
+3. Assembly - SKESA
+4. Annotation (extra material)
+5. Pangenome analysis (extra material)
+6. Clustering presence and absence of genes (extra material)
+7. Comparison of clustering methods (extra material)
 
-7. Comparison of clustering methods
-8. Data visualization
+8. Data visualization - Microreact
 
 These workflows in bioinformatics adopt a plug-and-play approach in that the output of one tool can be easily
 used as input to another tool without any extensive configuration. Having standards for data formats is what 
