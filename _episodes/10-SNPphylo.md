@@ -1,7 +1,7 @@
 ---
 title: "SNP phylogeny"
 teaching: 15
-exercises: 90
+exercises: 60
 questions:
 - "How to generate a phylogenetic tree from SNP data?"
 objectives:
