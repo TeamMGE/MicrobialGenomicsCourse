@@ -1,6 +1,6 @@
 ---
 title: "Sequence assembly"
-teaching: 45
+teaching: 10
 exercises: 30
 questions:
 - "How can the information in the sequencing reads be reduced?"
