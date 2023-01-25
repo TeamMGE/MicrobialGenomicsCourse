@@ -7,7 +7,7 @@ questions:
 objectives:
 - "Compare and interpret the different data sources."
 keypoints:
-- "SNP phylogeny, pangenome analysis and metadata can convey different messages"
+- "SNP phylogeny and metadata can convey different messages"
 - "Human interpretation is often needed to weigh the different information sources."
 - "The low mutation rate of *M. tuberculosis* does not allow to make confident inferences of transmission but does allow to exclude transmission" 
 ---
