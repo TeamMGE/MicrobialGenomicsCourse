@@ -568,11 +568,11 @@ $ ls
 {: .bash}
 
 ~~~
-ERR026473_1.fastq_trim.fastq  ERR026478_2.fastq_trim.fastq  ERR029206_1.fastq_trim.fastq
-ERR026473_2.fastq_trim.fastq  ERR026481_1.fastq_trim.fastq  ERR029206_2.fastq_trim.fastq
-ERR026474_1.fastq_trim.fastq  ERR026481_2.fastq_trim.fastq  ERR029207_1.fastq_trim.fastq
-ERR026474_2.fastq_trim.fastq  ERR026482_1.fastq_trim.fastq  ERR029207_2.fastq_trim.fastq
-ERR026478_1.fastq_trim.fastq  ERR026482_2.fastq_trim.fastq
+ERR026473_1.fastq.gz_trim.fastq  ERR026478_2.fastq.gz_trim.fastq  ERR029206_1.fastq.gz_trim.fastq
+ERR026473_2.fastq.gz_trim.fastq  ERR026481_1.fastq.gz_trim.fastq  ERR029206_2.fastq.gz_trim.fastq
+ERR026474_1.fastq.gz_trim.fastq  ERR026481_2.fastq.gz_trim.fastq  ERR029207_1.fastq.gz_trim.fastq
+ERR026474_2.fastq.gz_trim.fastq  ERR026482_1.fastq.gz_trim.fastq  ERR029207_2.fastq.gz_trim.fastq
+ERR026478_1.fastq.gz_trim.fastq  ERR026482_2.fastq.gz_trim.fastq
 ~~~
 {: .output}
 
