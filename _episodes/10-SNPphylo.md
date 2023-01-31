@@ -253,8 +253,3 @@ We will be using [iTOL](https://itol.embl.de/) to view the phylogenetic tree est
 > {: .solution}
 {: .challenge}
 
-> ## Discussion: What is the SNP distance between the isolates??
-> 
-> Hint:
-> Have a look at the file 'core.aln'
-{: .discussion}
