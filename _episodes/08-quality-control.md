@@ -402,8 +402,7 @@ filter poor quality reads and trim poor quality bases from our samples.
 
 Seqtk is a program written C and aims to be a Swiss army knife for sequencing reads. 
 You don't need to learn C to use Seqtk, but the fact that it's a C program helps
-explain the syntax that is used to run Seqtk. The basic
-command to run Seqtk starts like this:
+explain the syntax that is used to run Seqtk. Seqtk takes as input files either FASTQ files or gzipped FASTQ files and outputs FASTQ or FASTA files. The basic command to run Seqtk starts like this:
 
 ~~~
 $ seqtk
@@ -444,7 +443,7 @@ clean your data.
 A complete command for trimming with seqtk will look something like this:
 
 ~~~
-$ seqtk trimfq -q 0.01 ERR026473_1.fastq > ERR026473_1_trim.fastq
+$ seqtk trimfq -q 0.01 ERR01_1.fastq.gz > ERR01_1_trim.fastq
 ~~~
 {: .bash}
 
@@ -460,7 +459,7 @@ $ cd ~/dc_workshop/data/
 We are going to run seqtk on one sample giving it an error rate threshold of 0.01 which indicates the base call accuracy. We request that, after trimming, the chances that a base is called incorrectly are only 1 in 10000.
 
 ~~~
-$ seqtk trimfq -q 0.01 ERR026473_1.fastq > ERR026473_1_trim.fastq
+$ seqtk trimfq -q 0.01 ERR026473_1.fastq.gz > ERR026473_1_trim.fastq
 ~~~
 {: .bash}
 
@@ -468,12 +467,12 @@ Notice that we needed to redirect the output to a file. If we don't do that, the
 
 
 > ## Exercise
-> Use seqtk fqchk to compare the untrimmed and trimmed reads in terms of number of sequenced bases, percentage of A,G,C,T and N and average quality. What do you notice? Discuss with your neighbor. 
+> Use seqtk fqchk to compare the untrimmed and trimmed reads of ERR026473_1 in terms of number of sequenced bases, percentage of A,G,C,T and N and average quality. What do you notice? Discuss with your neighbor. 
 >
 >
 >> ## Solution
 >> 1) 
->> `seqtk fqchk ERR026473_1.fastq | head -n 3`
+>> `seqtk fqchk ERR026473_1_copy.fastq | head -n 3`
 >>
 >> min_len: 108; max_len: 108; avg_len: 108.00; 33 distinct quality values
 >>
@@ -501,7 +500,7 @@ is that we can use a `for` loop to iterate through our sample files
 quickly!
 
 ~~~
-$ for infile in *.fastq
+$ for infile in *.fastq.gz
 > do
 > outfile="${infile}"_trim.fastq
 > seqtk trimfq -q 0.01 "${infile}" >  "${outfile}" 
@@ -536,42 +535,32 @@ $ ls
 {: .bash}
 
 ~~~
-2_asm19595v2_genomic.infoalign	        ERR026481_2.fastq_trim.fastq
-ERR026473_1.fastq	                      ERR026482_1.fastq
-ERR026473_1.fastq_trim.fastq	          ERR026482_1.fastq_trim.fastq
-ERR026473_1.fastq_trim.fastq_trim.fastq	ERR026482_2.fastq
-ERR026473_2.fastq	                      ERR026482_2.fastq_trim.fastq
-ERR026473_2.fastq_trim.fastq	          ERR029206_1.fastq
-ERR026474_1.fastq	                      ERR029206_1.fastq_trim.fastq
-ERR026474_1.fastq_trim.fastq	          ERR029206_2.fastq
-ERR026474_2.fastq	                      ERR029206_2.fastq_trim.fastq
-ERR026474_2.fastq_trim.fastq	          ERR029207_1.fastq
-ERR026478_1.fastq	                      ERR029207_1.fastq_trim.fastq
-ERR026478_1.fastq_trim.fastq	          ERR029207_2.fastq
-ERR026478_2.fastq	                      ERR029207_2.fastq_trim.fastq
-ERR026478_2.fastq_trim.fastq	          GCF_000195955.2_ASM19595v2_genomic.fna
-ERR026481_1.fastq	                      seqtk
-ERR026481_1.fastq_trim.fastq	          test.txt
-ERR026481_2.fastq	                      trimmed_fastq
-
-
+2_asm19595v2_genomic.infoalign   ERR026481_2.fastq.gz
+ERR026473_1.copy.fastq           ERR026481_2.fastq.gz_trim.fastq
+ERR026473_1.fastq.gz             ERR026482_1.fastq.gz
+ERR026473_1.fastq.gz_trim.fastq  ERR026482_1.fastq.gz_trim.fastq
+ERR026473_2.fastq.gz             ERR026482_2.fastq.gz
+ERR026473_2.fastq.gz_trim.fastq  ERR026482_2.fastq.gz_trim.fastq
+ERR026474_1.fastq.gz             ERR029206_1.fastq.gz
+ERR026474_1.fastq.gz_trim.fastq  ERR029206_1.fastq.gz_trim.fastq
+ERR026474_2.fastq.gz             ERR029206_2.fastq.gz
+ERR026474_2.fastq.gz_trim.fastq  ERR029206_2.fastq.gz_trim.fastq
+ERR026478_1.fastq.gz             ERR029207_1.fastq.gz
+ERR026478_1.fastq.gz_trim.fastq  ERR029207_1.fastq.gz_trim.fastq
+ERR026478_2.fastq.gz             ERR029207_2.fastq.gz
+ERR026478_2.fastq.gz_trim.fastq  ERR029207_2.fastq.gz_trim.fastq
+ERR026481_1.fastq.gz             GCF_000195955.2_ASM19595v2_genomic.fna
+ERR026481_1.fastq.gz_trim.fastq  
 ~~~
 {: .output}
 
-If you look very closely, you'll see that you have three files for the
-`ERR026473_1` sample. This is because we already had the `ERR026473_1_trim.fastq` file in our directory when we started
-our `for` loop (because we had run seqtk on just that one file already).
-
-
 We've now completed the trimming and filtering steps of our quality
 control process! Before we move on, let's move our trimmed FASTQ files
-to a new subdirectory within our `data/` directory. We can also remove
-our extra, double-trimmed file for the `ERR026473_1` sample.
+to a new subdirectory within our `data/` directory.
 
 ~~~
 $ cd ~/dc_workshop/data/
 $ mkdir trimmed_fastq
-$ rm ERR026473_1.trim.fastq_trim.fastq
 $ mv *_trim* trimmed_fastq
 $ cd trimmed_fastq
 $ ls
