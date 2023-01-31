@@ -253,3 +253,16 @@ We will be using [iTOL](https://itol.embl.de/) to view the phylogenetic tree est
 > {: .solution}
 {: .challenge}
 
+
+
+> ## Extra challenge: How does the clustering change when aligning the assembled contigs to the reference genome?
+> 
+> Align the assembled contigs to the reference genome with snippy. Produce a core genome alignment and a phylogenetic tree as done previously for the reads.
+> ~~~
+> $ for sample in ERR026473 ERR026474 ERR026478 ERR026481 ERR026482 ERR029206 ERR029207
+> do  
+> snippy --outdir ~/dc_workshop/results/snps/"${sample}"_contigs --ref ~/dc_workshop/data/GCF_000195955.2_ASM19595v2_genomic.fna --contigs ~/dc_workshop/results/assembly/"${sample}".fasta
+> done
+> ~~~
+{: .bash}
+{: .challenge}
