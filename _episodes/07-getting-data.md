@@ -248,7 +248,7 @@ If you reconnect the next day to your machine, you will also have to reconnect t
 We can do this one by one but given that each download takes about one to two hours, this could keep us up all night. Instead of downloading one by one we can apply a loop. Let's see what that looks like and then we'll discuss what we're doing with each line of our loop.
 
 ~~~
-$ for filename in ERR026473 ERR026474 ERR026478 ERR026481 ERR026482 ERR029206 ERR029207
+$ for filename in ERR01 ERR02 ERR03
 > do
 > echo ftp://ftp.sra.ebi.ac.uk/"${filename}".fastq.gz
 > done
@@ -271,10 +271,10 @@ In this example, the list is seven filenames/
 Each time the loop iterates, it will assign a file name to the variable `filename`
 and run the `wget` command.
 The first time through the loop,
-`$filename` is `ERR026473.fastq.gz`. 
-The interpreter runs the command `wget` on `ERR026473.fastq.gz` at the server ftp://ftp.sra.ebi.ac.uk/
+`$filename` is `ERR01.fastq.gz`. 
+The interpreter runs the command `wget` on `ERR01.fastq.gz` at the server ftp://ftp.sra.ebi.ac.uk/
 For the second iteration, `$filename` becomes 
-`ERR026473.fastq.gz`. This time, the shell runs `wget` on `ERR026473.fastq.gz`.
+`ERR02.fastq.gz`. This time, the shell runs `wget` on `ERR02.fastq.gz`.
 
 Use {} to wrap the variable so that .fastq.gz will not be interpreted as part of the variable name. In addition, quoting the shell variables is a good practice AND necessary if your variables have spaces in them.
 
@@ -309,7 +309,7 @@ The shell itself doesn't care what the variable is called;
 if we wrote this loop as:
 
 ~~~
-$ for x in ERR026473 ERR026474 ERR026478 ERR026481 ERR026482 ERR029206 ERR029207
+$ for x in ERR01 ERR02 ERR03
 > do
 > echo ftp://ftp.sra.ebi.ac.uk/"${x}".fastq.gz
 > done
@@ -319,7 +319,7 @@ $ for x in ERR026473 ERR026474 ERR026478 ERR026481 ERR026482 ERR029206 ERR029207
 or:
 
 ~~~
-$ for temperature in ERR026473 ERR026474 ERR026478 ERR026481 ERR026482 ERR029206 ERR029207
+$ for temperature in ERR01 ERR02 ERR03
 > do
 > echo ftp://ftp.sra.ebi.ac.uk/"${temperature}".fastq.gz
 > done
@@ -336,7 +336,7 @@ increase the odds that the program won't do what its readers think it does.
 > The `for` loop is interpreted as a multipart command.  If you press the up arrow on your keyboard to recall the command, it will be shown like so:
 >
 > ~~~   
-> $ for filename in ERR026473 ERR026474 ERR026478 ERR026481 ERR026482 ERR029206 ERR029207; do echo ftp://ftp.sra.ebi.ac.uk/"${filename}".fastq.gz ; done
+> $ for filename in ERR01 ERR02 ERR03; do echo ftp://ftp.sra.ebi.ac.uk/"${filename}".fastq.gz ; done
 > ~~~
 > {: .bash}
 > 
