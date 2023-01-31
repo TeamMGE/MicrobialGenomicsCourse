@@ -45,7 +45,7 @@ It is very fast but a single run of SNIPPY still takes about 10 to 12 minutes. W
 $ cd ~/dc_workshop/data/trimmed_fastq/
 $ for sample in ERR026473 ERR026474 ERR026478 ERR026481 ERR026482 ERR029206 ERR029207
 >  do
->  snippy  --outdir ~/dc_workshop/results/snps/"${sample}" --ref ~/dc_workshop/data/GCF_000195955.2_ASM19595v2_genomic.fna --R1 "${sample}"_1.fastq_trim.fastq --R2 "${sample}"_2.fastq_trim.fastq
+>  snippy  --outdir ~/dc_workshop/results/snps/"${sample}" --ref ~/dc_workshop/data/GCF_000195955.2_ASM19595v2_genomic.fna --R1 "${sample}"_1.fastq.gz_trim.fastq --R2 "${sample}"_2.fastq.gz_trim.fastq
 >  done
 ~~~
 {: .bash}
@@ -253,8 +253,21 @@ We will be using [iTOL](https://itol.embl.de/) to view the phylogenetic tree est
 > {: .solution}
 {: .challenge}
 
-> ## Discussion: What is the SNP distance between the isolates??
+
+
+> ## Extra challenge: How does the clustering change when aligning the assembled contigs to the reference genome?
 > 
-> Hint:
-> Have a look at the file 'core.aln'
-{: .discussion}
+> Align the assembled contigs to the reference genome with snippy. Produce a core genome alignment and a phylogenetic tree as done previously for the reads. How many SNPs were identified by SNIPPY when compared to the reference strain? More or less than for read alignment? Why?
+> ~~~
+> $ for sample in ERR026473 ERR026474 ERR026478 ERR026481 ERR026482 ERR029206 ERR029207
+> do  
+> snippy --outdir ~/dc_workshop/results/snps/"${sample}"_contigs --ref ~/dc_workshop/data/GCF_000195955.2_ASM19595v2_genomic.fna --contigs ~/dc_workshop/results/assembly/"${sample}".fasta
+> done
+> head -n 10 ~/dc_workshop/results/snps/*contigs/snps.txt
+> ...
+> snippy-core --noref --aformat=phylip ERR026473_contigs ERR026474_contigs ERR026478_contigs ERR026481_contigs ERR026482_contigs ERR029206_contigs ERR029207_contigs
+> phyml -i core.aln
+> mv core.aln_phyml_tree tree/core_snps_contigs.newick
+> ~~~
+{: .bash}
+{: .challenge}

@@ -37,12 +37,12 @@ window.onload = set_page_view_defaults;
 
 ##  Logging into a Linux Server
 
-To access the pre-configured workshop data, you'll need to use our log-in credentials (user name and password). A username will be assigned to you at the workshop. In the following, always replace dcuser with your user name 
+To access the pre-configured workshop data, you'll need to use our log-in credentials (user name and password). A username will be assigned to you at the workshop. In the following, always replace molepi30 with your user name 
 and the password with the password assigned to you.
 
 **Log-in Credentials (case-sensitive!)**
 
-- Username: dcuser
+- Username: molepi30
 - Password: password
 
 But first, you need a place to log *into*! To find the server that holds your data,
@@ -96,7 +96,7 @@ D. You should now be connected!
 A. Open the terminal and type the following command substituting 'ip_address' for the IP address your instructor will provide. *Be sure to pay attention to capitalization and spaces*<br>
 
 ~~~
-$ ssh dcuser@ip_address
+$ ssh molepi30@ip_address
 ~~~
 {: .bash}
 
@@ -123,7 +123,7 @@ that are currently running, but doesn't shut the computer off.
 To log off, use the `exit` command in the same terminal you connected with. This will close the connection, and your terminal will go back to showing your local computer:
 
 ~~~
-dcuser@ip-172-31-62-209 $ exit
+molepi30@ip-172-31-62-209 $ exit
 
 Amandas-MacBook-Pro-3 $
 ~~~

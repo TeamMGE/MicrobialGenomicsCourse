@@ -54,10 +54,15 @@ To run SKESA we will use the skesa command with a number of option that we will 
 ~~~
 $ for sample in ERR026473 ERR026474 ERR026478 ERR026481 ERR026482 ERR029206 ERR029207
 >  do
->  skesa --cores 2 --memory 32 --fastq "${sample}"_1.fastq_trim.fastq "${sample}"_2.fastq_trim.fastq 1> ~/dc_workshop/results/assembly/"${sample}".fasta
+>  skesa \
+--cores 2 \
+--memory 32 \
+--fastq "${sample}"_1.fastq.gz_trim.fastq "${sample}"_2.fastq.gz_trim.fastq 1> ~/dc_workshop/results/assembly/"${sample}".fasta
 >  done
 ~~~
 {: .bash}
+
+A non-quoted backslash, \, is used as an escape character in Bash. It preserves the literal value of the next character that follows, with the exception of newline. This means that the back slash starts a new line without starting a new command - we only add it for better readability. 
 
 
 **Detach session (process keeps running in background)**
