@@ -32,27 +32,12 @@ ERR026474_2.fastq.gz  ERR026481_2.fastq.gz  ERR029206_2.fastq.gz
 {: .output}
 
 
-All new files start with ERR and have an fastq.gz extension. It means they are in fastq format and compressed. Let's uncompress with a  `for` loop to iterate through all of our `.gz` files. 
-~~~
-$ for filename in *.gz
-> do
-> gunzip "${filename}"
-> done
+All new files start with ERR and have an fastq.gz extension. It means they are in fastq format and compressed. Let's make a copy of one file and uncompress this file to inspect it further
+ ~~~
+cp ERR026473_1.fastq.gz ERR026473_1.copy.fastq.gz
+gunzip ERR026473_1.copy.fastq.gz
 ~~~
 {: .bash}
-
-
-> ## Discussion
-> 
-> Yesterday's 'for' loop contained 7 samples, but we got 14 samples.
-> Why is this? What is the difference between the two files that start with the same name? Discuss with your neighbour.
-> 
-> Hint: have a look at the 'head' of each of the files
-> 
->> ## Solution
->> Have a look at the Illumina website explaining [paired-end sequencing](https://www.illumina.com/science/technology/next-generation-sequencing/paired-end-vs-single-read-sequencing.html)
-> {: .solution}
-{: .challenge}
 
 
 # Bioinformatics workflows
@@ -112,7 +97,7 @@ We can view the first complete read in one of the files our dataset by using `he
 the first four lines.
 
 ~~~
-$ head -n4 ERR026481_1.fastq
+$ head -n4 ERR026481_1.copy.fastq
 ~~~
 {: .bash}
 
@@ -226,36 +211,11 @@ $ cd ~/dc_workshop/data/
 
 > ## Exercise
 > 
-> How many FASTQ files are in this dataset? How big are the files?
-> (Hint: Look at the options for the `ls` command to see how to show
-> file sizes.)
+> Yesterday we downloaded 7 samples. How many FASTQ files are in this dataset? Why is this? What is the difference between the two files that start with the same name? Discuss with your neighbour.
 >
 >> ## Solution
->>  
->> ~~~
->> $ ls -l -h *fastq
->> ~~~
->> {: .bash}
 >> 
->> ~~~
->> -rw-rw-r-- 1 guest guest 548M Mai 29  2017 ERR026473_1.fastq
->>-rw-rw-r-- 1 guest guest 548M Mai 29  2017 ERR026473_2.fastq
->>-rw-rw-r-- 1 guest guest 438M Mai 29  2017 ERR026474_1.fastq
->>-rw-rw-r-- 1 guest guest 438M Mai 29  2017 ERR026474_2.fastq
->>-rw-rw-r-- 1 guest guest 659M Mai 29  2017 ERR026478_1.fastq
->>-rw-rw-r-- 1 guest guest 659M Mai 29  2017 ERR026478_2.fastq
->>-rw-rw-r-- 1 guest guest 531M Mai 29  2017 ERR026481_1.fastq
->>-rw-rw-r-- 1 guest guest 531M Mai 29  2017 ERR026481_2.fastq
->>-rw-rw-r-- 1 guest guest 473M Mai 29  2017 ERR026482_1.fastq
->>-rw-rw-r-- 1 guest guest 473M Mai 29  2017 ERR026482_2.fastq
->>-rw-rw-r-- 1 guest guest 813M Jun  9  2017 ERR029206_1.fastq
->>-rw-rw-r-- 1 guest guest 813M Jun  9  2017 ERR029206_2.fastq
->>-rw-rw-r-- 1 guest guest 751M Jun  9  2017 ERR029207_1.fastq
->>-rw-rw-r-- 1 guest guest 751M Jun  9  2017 ERR029207_2.fastq
->> ~~~
->> {: .output}
->> 
->> There are 14 FASTQ files ranging from 548M (548MB) to 751M (751MB)
+>> There are 14 FASTQ files. Each sample has [paired-end reads](https://thesequencingcenter.com/knowledge-base/what-are-paired-end-reads/). 
 >> 
 > {: .solution}
 {: .challenge}
@@ -270,22 +230,22 @@ You will see an automatically updating output message telling you the
 progress of the analysis. It will start like this: 
 
 ~~~
-Started analysis of ERR026473_1.fastq
-Approx 5% complete for ERR026473_1.fastq
-Approx 10% complete for ERR026473_1.fastq
-Approx 15% complete for ERR026473_1.fastq
-Approx 20% complete for ERR026473_1.fastq
-Approx 25% complete for ERR026473_1.fastq
-Approx 30% complete for ERR026473_1.fastq
-Approx 35% complete for ERR026473_1.fastq
-Approx 40% complete for ERR026473_1.fastq
-Approx 45% complete for ERR026473_1.fastq
-Approx 50% complete for ERR026473_1.fastq
-Approx 55% complete for ERR026473_1.fastq
-Approx 60% complete for ERR026473_1.fastq
-Approx 65% complete for ERR026473_1.fastq
-Approx 70% complete for ERR026473_1.fastq
-Approx 75% complete for ERR026473_1.fastq
+Started analysis of ERR026473_1.fastq.gz
+Approx 5% complete for ERR026473_1.fastq.gz
+Approx 10% complete for ERR026473_1.fastq.gz
+Approx 15% complete for ERR026473_1.fastq.gz
+Approx 20% complete for ERR026473_1.fastq.gz
+Approx 25% complete for ERR026473_1.fastq.gz
+Approx 30% complete for ERR026473_1.fastq.gz
+Approx 35% complete for ERR026473_1.fastq.gz
+Approx 40% complete for ERR026473_1.fastq.gz
+Approx 45% complete for ERR026473_1.fastq.gz
+Approx 50% complete for ERR026473_1.fastq.gz
+Approx 55% complete for ERR026473_1.fastq.gz
+Approx 60% complete for ERR026473_1.fastq.gz
+Approx 65% complete for ERR026473_1.fastq.gz
+Approx 70% complete for ERR026473_1.fastq.gz
+Approx 75% complete for ERR026473_1.fastq.gz
 ~~~
 {: .output}
 
@@ -294,13 +254,10 @@ fourteen of our FASTQ files. When the analysis completes, your prompt
 will return. So your screen will look something like this:
 
 ~~~
-Approx 75% complete for ERR029207_2.fastq
-Approx 80% complete for ERR029207_2.fastq
-Approx 85% complete for ERR029207_2.fastq
-Approx 90% complete for ERR029207_2.fastq
-Approx 95% complete for ERR029207_2.fastq
-Analysis complete for ERR029207_2.fastq
-dcuser@ip-172-31-58-5:~/dc_workshop/data$ 
+Approx 90% complete for ERR029207_2.fastq.gz
+Approx 95% complete for ERR029207_2.fastq.gz
+Analysis complete for ERR029207_2.fastq.gz
+molepi30@lp0106:~/dc_workshop/data$ 
 ~~~
 {: .output}
 
@@ -313,35 +270,35 @@ $ ls
 {: .bash}
 
 ~~~
-ERR026473_1.fastq       ERR026481_2_fastqc.html
-ERR026473_1_fastqc.html ERR026481_2_fastqc.zip
-ERR026473_1_fastqc.zip  ERR026482_1.fastq
-ERR026473_2.fastq       ERR026482_1_fastqc.html
-ERR026473_2_fastqc.html ERR026482_1_fastqc.zip
-ERR026473_2_fastqc.zip  ERR026482_2.fastq
-ERR026474_1.fastq       ERR026482_2_fastqc.html
-ERR026474_1_fastqc.html ERR026482_2_fastqc.zip
-ERR026474_1_fastqc.zip  ERR029206_1.fastq
-ERR026474_2.fastq       ERR029206_1_fastqc.html
-ERR026474_2_fastqc.html ERR029206_1_fastqc.zip
-ERR026474_2_fastqc.zip  ERR029206_2.fastq
-ERR026478_1.fastq       ERR029206_2_fastqc.html
-ERR026478_1_fastqc.html ERR029206_2_fastqc.zip
-ERR026478_1_fastqc.zip  ERR029207_1.fastq
-ERR026478_2.fastq       ERR029207_1_fastqc.html
-ERR026478_2_fastqc.html ERR029207_1_fastqc.zip
-ERR026478_2_fastqc.zip  ERR029207_2.fastq
-ERR026481_1.fastq       ERR029207_2_fastqc.html
-ERR026481_1_fastqc.html ERR029207_2_fastqc.zip
-ERR026481_1_fastqc.zip  GCF_000195955.2_ASM19595v2_genomic.fna
-ERR026481_2.fastq       trimmed_fastq
-
+2_asm19595v2_genomic.infoalign  ERR026481_2_fastqc.html
+ERR026473_1.copy.fastq          ERR026481_2_fastqc.zip
+ERR026473_1_fastqc.html         ERR026481_2.fastq.gz
+ERR026473_1_fastqc.zip          ERR026482_1_fastqc.html
+ERR026473_1.fastq.gz            ERR026482_1_fastqc.zip
+ERR026473_2_fastqc.html         ERR026482_1.fastq.gz
+ERR026473_2_fastqc.zip          ERR026482_2_fastqc.html
+ERR026473_2.fastq.gz            ERR026482_2_fastqc.zip
+ERR026474_1_fastqc.html         ERR026482_2.fastq.gz
+ERR026474_1_fastqc.zip          ERR029206_1_fastqc.html
+ERR026474_1.fastq.gz            ERR029206_1_fastqc.zip
+ERR026474_2_fastqc.html         ERR029206_1.fastq.gz
+ERR026474_2_fastqc.zip          ERR029206_2_fastqc.html
+ERR026474_2.fastq.gz            ERR029206_2_fastqc.zip
+ERR026478_1_fastqc.html         ERR029206_2.fastq.gz
+ERR026478_1_fastqc.zip          ERR029207_1_fastqc.html
+ERR026478_1.fastq.gz            ERR029207_1_fastqc.zip
+ERR026478_2_fastqc.html         ERR029207_1.fastq.gz
+ERR026478_2_fastqc.zip          ERR029207_2_fastqc.html
+ERR026478_2.fastq.gz            ERR029207_2_fastqc.zip
+ERR026481_1_fastqc.html         ERR029207_2.fastq.gz
+ERR026481_1_fastqc.zip          GCF_000195955.2_ASM19595v2_genomic.fna
+ERR026481_1.fastq.gz
 ~~~
 {: .output}
 
 
 
-For each input FASTQ file, FastQC has created a `.zip` file and a
+For each input gzipped FASTQ file, FastQC has created a `.zip` file and a
 `.html` file. The `.zip` file extension indicates that this is 
 actually a compressed set of multiple output files. We'll be working
 with these output files soon. The `.html` file is a stable webpage
