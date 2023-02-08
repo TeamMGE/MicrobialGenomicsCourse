@@ -14,7 +14,7 @@ The microbial **pangenome** is the union of genes shared by genomes of interest.
 
 Find more information of the pangenome [here](http://www.metagenomics.wiki/pdf/definition/pangenome)
 
-### Extract genes recB, rubA and dnaA from two genomes.
+### Extract proteins RecB, RubA and DnaA from two genomes.
 
 For this, we need to find if the genes are present in the annotated files.
 
