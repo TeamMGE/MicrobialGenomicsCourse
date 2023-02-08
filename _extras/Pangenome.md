@@ -30,7 +30,7 @@ For this, we need to find if the genes are present in the annotated files.
 > > 
 > > ~~~
 > > $ cd annnotation
-> > $ grep -A 10 'recB' */*gbk | grep translation 
+> > $ grep -A 10 'recB' */*faa 
 > > 
 > > ~~~
 > > {: .output}
