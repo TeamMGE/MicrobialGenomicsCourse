@@ -17,7 +17,7 @@ This lesson uses the [Software Carpentry]({{ site.swc_site }}) and [Data Carpent
 
 > ## Data
 >
-> This computer practical uses data from [this publication](https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-020-0744-3) and from [jgi](https://mycocosm.jgi.doe.gov/mycocosm/home) 
+> This computer practical uses data from [this publication](https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-020-0744-3) and from [jgi](https://mycocosm.jgi.doe.gov/mycocosm/home). 
 > A [cheat sheet](files/cheatsheet.pdf) of the used Linux commands is available.
 {: .prereq}
 
