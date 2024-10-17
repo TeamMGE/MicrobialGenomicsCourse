@@ -4,23 +4,20 @@ root: .
 permalink: index.html  # Is the only page that don't follow the partner /:path/index.html
 ---
 
-This lesson uses the
-[Software Carpentry]({{ site.swc_site }}) and
-[Data Carpentry]({{ site.dc_site }}) lesson template and is inspired
-and partially based on the [Data Carpentry Genomics lesson]({{ site.dc_site }}).
+This lesson uses the [Software Carpentry]({{ site.swc_site }}) and [Data Carpentry]({{ site.dc_site }}) lesson template.
 
 
 > ## Schedule computer practical
 >
-> 0.  Tuesday, 9.30 - 12.15: Intro to data and the command line, downloading data
-> 1.  Tuesday, 13.45 - 17.00: Trimming, SNP-based phylogeny, assembly
-> 2.  Wednesday, 9.30 - 12.15: Visualizations, conclusions
+> 0.  Wednesday, 10:00 - 12:00: Intro and genome assembly assessment and comparision with Quast
+> 1.  Wednesday, 12:00 - 12:45: Gemome completness with BUSCO
+> 2.  Wednesday, 13:15 - 15:30: Whole-genome alignmnet with MUMMER
+> 3.  Monday, 9:00 - 10:30 .... 
 {: .checklist}
 
 > ## Data
 >
-> This computer practical uses data from [this publication](https://bmcinfectdis.biomedcentral.com/articles/10.1186/1471-2334-13-110)
-> We are using [this](https://docs.google.com/document/d/19A_srUEBTkP3XOBUIzBwneC6-ORsexMxadwCRaLG_UU/edit?usp=sharing) collaborative document.
+> This computer practical uses data from [this publication](https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-020-0744-3) and from [jgi](https://mycocosm.jgi.doe.gov/mycocosm/home) 
 > A [cheat sheet](files/cheatsheet.pdf) of the used Linux commands is available.
 {: .prereq}
 
