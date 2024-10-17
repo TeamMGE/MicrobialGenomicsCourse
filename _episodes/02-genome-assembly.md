@@ -41,7 +41,6 @@ Inspect the assembly_summary file further. You can look at [README_assembly_summ
 > 
 > What does the term ‘representative genome’ refer to?
 >
-
 >> ## Solution
 >> 
 >> Representative genomes: Additional high-quality genomes are identified by clustering genomes and applying weighting metrics that include consideration of species-level taxonomic classification (e.g., a preference for type strain) and assembly quality (e.g. a preference for complete genomes but WGS is allowed). Additional quality assurance analysis is being added to add consideration of annotation quality metrics such as assessing the number of frame-shifted proteins (compared to close neighbours), presence of the set of expected rRNA and tRNAs, and gene density. We also take into consideration taxonomic diversity and will include some genomes that are taxonomic outliers for which little functional information is available in the representative genome collection.
@@ -80,6 +79,6 @@ $ cat assembly_summary.txt | grep -v "^#" | cut -f8 | cut -f1,2 -d" " | sort | u
 > 
 > Can you think about a code that would give you the number of complete (chromosome-level) genome assemblies?
 >
-
+{: .challenge}
 
 {% include links.md %}
