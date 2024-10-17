@@ -32,7 +32,7 @@ The genome of the *Z. tritici* reference genome of strain IPO323 was sequenced i
 
 In the last decade, many more *Z. tritici* isolates have been sequenced using a variety of sequencing methodologies (short-read and long-read sequencing technologies). An overview over some of the genomes we will be using can be found in the *Z. tritici* pan-genome [paper](https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-020-0744-3). 
 
-##Outline of the coming days
+## Outline of the coming days
 
 In the first part of the practical, we will examine the quality of different genome assemblies of *Z. tritici*. We will specifically focus on differences between genome assemblies generated from sequencing data from 2nd or 3rd generation sequencing machines. In the afternoon, we will start comparing genome assemblies to identify large-scale structural differences between *Z. tritici* strains.
 
