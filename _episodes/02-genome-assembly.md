@@ -3,19 +3,19 @@ title: "Genome assembly information"
 teaching: 0
 exercises: 20
 questions:
-- Obtain and interpret genome assembly information from NCBI?
+- How can you obtain and interpret genome assembly information from NCBI?
 objectives:
 - Practice the usage of command line to get files from the internet and examine their content
 - Interpret genome assembly overview from the internet
 keypoints:
-- You can assembly information from NCBI
-- You can get a subset of information and determine the number of genome assemblies
+- You can obtain assembly information from NCBI
+- You can subset this information and determine the number of genome assemblies
 ---
 
 ##  Genome assembly information
 In our exercises, we will examine the quality of assembled *Z. tritici* genomes that are publicly available. We will use genome assemblies from NCBI. Unfortunately, generating eukaryote *de novo* genome assembly is beyond the scope of the exercises; in contrast to bacterial genomes, assembly of eukaryotic genomes requires significantly more computational power and time.
 
-The genome assemblies of some _Z. tritici_ isolates downloaded from NCBI GenBank can be found **data/fungalgenomics_seidl/assemblies/** (state: 2020). There are continuously more and more genome assemblies being generated and deposited at NCBI. 
+The genome assemblies of some _Z. tritici_ isolates downloaded from NCBI GenBank can be found **data/fungalgenomics_seidl/assemblies/** (state: 2018). There are continuously more and more genome assemblies being generated and deposited at NCBI. 
 
 To get an overview of the number of genome assemblies currently at NCBI. We can obtain an overview file from NCBI with information of all genomes belonging to *fungi*.
 
