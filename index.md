@@ -9,10 +9,11 @@ This lesson uses the [Software Carpentry]({{ site.swc_site }}) and [Data Carpent
 
 > ## Schedule computer practical
 >
-> 0.  Wednesday, 10:00 - 12:00: Intro and genome assembly assessment and comparision with Quast
-> 1.  Wednesday, 12:00 - 12:45: Gemome completness with BUSCO
-> 2.  Wednesday, 13:15 - 15:30: Whole-genome alignmnet with MUMMER
-> 3.  Monday, 9:00 - 10:30 .... 
+> 0.  Wednesday, 10:00 - 11:15: Intro and genome assemblies 
+> 1.  Wednesday, 11:15 - 12:00: Genome assembly assessment and comparision with Quast
+> 2.  Wednesday, 12:00 - 12:30: Gemome completness with BUSCO
+> 3.  Wednesday, 13:15 - 15:30: Whole-genome alignmnet with MUMMER
+> 4.  Monday, 9:00 - 10:30 .... 
 {: .checklist}
 
 > ## Data

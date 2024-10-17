@@ -1,7 +1,7 @@
 ---
 title: "Genome assembly quality"
 teaching: 0
-exercises: 30
+exercises: 45
 questions:
 - How can we interpret the genome assembly quality of fungal genome assemblies?
 objectives:
@@ -12,7 +12,7 @@ keypoints:
 - You can examine and critically reflect on the impact of genome sequencing technologies on fungal genome assemblies.
 ---
 
-##  Genome assembly information
+##  Genome assembly quality
 We will now analyse *Zymoseptoria* genomes assemblies in more detail. Take a look at the `QUAST` [manual](http://quast.sourceforge.net/quast) to understand how to prepare a suitable command to execute `QUAST` on the command line.
 
 The genome assemblies of some _Z. tritici_ isolates downloaded from NCBI GenBank can be found **data/fungalgenomics_seidl/assemblies/** (state: 2020). It will be useful to make a symbolic link to the data folder in your own home directory (or any other folder your own). You can do this by using `ln -s [source folder] [target folder]` where *source folder* is the name/location of the data folder and *target folder* is the name of the link you wish to create.
@@ -70,7 +70,7 @@ The report files \(html and txt\) for all the _Zymoseptoria_ genomes \(of those 
 > {: .solution}
 {: .challenge}
 
-Based on the QUAST assessment: If you would need to decide, which genomes were likely assembled using short-read data and long read data and what guides your decision?
+Take another look on the QUAST quality assessments and evaluate the different key criteria (N50, contig number, etc.). If you would need to decide, which genomes were likely assembled using short-read data and long read data and what guides your decision?
 
 We can now specifically focus on genome assemblies that have high quality (i.e., low number of contigs and high N50). If we compare the number of contigs between the reference genome assembly IPO323 and ST99CH\_3D7, we can observe that ST99CH\_3D7 has less contigs than the reference genome. Do you think contigs here correspond to chromosomes?
 
