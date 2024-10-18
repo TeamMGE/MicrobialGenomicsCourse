@@ -111,6 +111,6 @@ You can think of `-s` as a seed length for the mappings. It defaults to 5kb, whi
 
 Increasing `-s` to >10 kb results in a touch of "underalignment". On of the sequences is not aligned into the graph, and two more are only partially aligned, resulting in the appearance of a new graph tip. 
 
-This highlights that pan-genome graph genome graph generation is sensitive to the parameters used. It is important to 
+This highlights that pan-genome graph genome graph generation is sensitive to the parameters used. It is important to that parameter settings for whole genomes and chromosomes often are more stringent than those we have tested here. 
 
 {% include links.md %}
