@@ -15,8 +15,8 @@ keypoints:
 - You can combine the learnt methodologies to conceptualise a computational strategy to identify isolate-/species-specific genomic regions.
 ---
 
-##  Genome comparisons
-#Genome alignments
+#  Genome comparisons
+## Genome alignments
 In the previous exercises, we have focussed on assessing the quality and completness of eukaryotic genome assemblies. 
 
 We now want to move a step further by trying to identify meaningful biological differences between the genomes of two isolates and/or species.
@@ -123,7 +123,7 @@ Focus on the alignment of one core chromosome and one dispensable chromosome. Wh
 > {: .solution}
 {: .challenge}
 
-# Identification of shared and unique genomic regions in genome assemblies
+## Identification of shared and unique genomic regions in genome assemblies
 Next to the visual inspection using `mummerplot`, whole\-genome alignments from `nucmer` can also be systematically analysed to identify regions that are present or absent in the query or reference. These would be regions present in either of the sequences not covered by an alignment.
 
 We will make use of `show-coords` as it provides us with access to the genomic coordinates of alignments in both the query and the reference. 

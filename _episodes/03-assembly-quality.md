@@ -12,7 +12,7 @@ keypoints:
 - You can examine and critically reflect on the impact of genome sequencing technologies on fungal genome assemblies.
 ---
 
-##  Genome assembly quality
+#  Genome assembly quality
 We will now analyse *Zymoseptoria* genomes assemblies in more detail. Take a look at the `QUAST` [manual](http://quast.sourceforge.net/quast) to understand how to prepare a suitable command to execute `QUAST` on the command line.
 
 The genome assemblies of some _Z. tritici_ isolates downloaded from NCBI GenBank can be found **data/fungalgenomics_seidl/assemblies/** (state: 2020). It will be useful to make a symbolic link to the data folder in your own home directory (or any other folder your own). You can do this by using `ln -s [source folder] [target folder]` where *source folder* is the name/location of the data folder and *target folder* is the name of the link you wish to create.

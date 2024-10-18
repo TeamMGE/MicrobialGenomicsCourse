@@ -12,7 +12,7 @@ keypoints:
 - You can subset this information and determine the number of genome assemblies
 ---
 
-##  Genome assembly information
+#  Genome assembly information
 In our exercises, we will examine the quality of assembled *Z. tritici* genomes that are publicly available. We will use genome assemblies from NCBI. Unfortunately, generating eukaryote *de novo* genome assembly is beyond the scope of the exercises; in contrast to bacterial genomes, assembly of eukaryotic genomes requires significantly more computational power and time.
 
 The genome assemblies of some _Z. tritici_ isolates downloaded from NCBI GenBank can be found **data/fungalgenomics_seidl/assemblies/** (state: 2018). There are continuously more and more genome assemblies being generated and deposited at NCBI. 

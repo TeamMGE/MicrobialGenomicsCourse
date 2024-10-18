@@ -11,7 +11,7 @@ keypoints:
 - You can critically reflect on the results of BUSCO and provide technical and biological explanations.
 ---
 
-##  Genome assembly completness
+#  Genome assembly completness
 We can examine the quality and completeness of genome assemblies by searching for specific set of genes that are known to be present in single copy in all/the majority of species of a selected group of eukaryotes. Think of example genes that are shared by all animals or by all plants or fungi. BUSCO is a tool that exactly does this type of analysis. It is very similar to `checkm` that you used in the first week of the course that enabled you to find marker genes in bacterial genomes. The main differences is that BUSCO is able to specifically address challenges in gene annotation that are specific to eukaryotes, e.g., the presence of exons and intron. You will learn more about gene annotation in the lectures and computer assignments on fungal gene annotation and gene expression.
 
 Due to time constrains in the course, we have performed a BUSCO analyses for some selected genomes. The analysis was performed by searching for genes that are conserved and single copy in all ascomycete fungi, the fungal group to which *Z. tritici* belongs to. 
