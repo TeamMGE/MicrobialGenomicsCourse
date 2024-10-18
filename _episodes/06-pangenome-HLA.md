@@ -66,7 +66,7 @@ We also get some 1D visualisations. These present the graph as a kind of matrix.
 >
 >> ## Solution
 >> 
->> There are at least three larger regions of rearrangements in the pan-genome graph. There are no large duplications in the graph, visualize by the self-depth plot. Moroever, one of the sequences is inverted, as visual from the plots. Interestingly, the total graph length is nearly double the length of most of the input sequences. This indicates a strong underalignment of all the sequences, likely due to the default parameters used.
+>> There are at least three larger regions of rearrangements in the pan-genome graph. There are no large duplications in the graph, visualize by the self-depth plot. Moroever, one of the sequences is inverted, as visual from the plots. Interestingly, the total graph length is nearly double the length of most of the input sequences, suggesting that there is quite a high level of diversity in the graph between the sequences.
 >>
 > {: .solution}
 {: .challenge}
@@ -90,28 +90,17 @@ The `-p` setting affects the level of pairwise divergence that's accepted in the
  ~~~
  {: .bash}
  
-It is clearly visible in the diagnostic plots, but also in the alignment file, that the graph has been broken into isolated components formed by sets of sequences that have >95% pairwise identity.
-
-> ## Exercise
-> 
-> How does the pan-genome graph change when you adjust the percent identity to 80%?
->
->> ## Solution
->> 
->> There is only minimal differences between the previous graph and the new graph. One would expect that lowering identity has a significant impact on the graph by providing more opportunity for an alignment.
->>
-> {: .solution}
-{: .challenge}
+It is clearly visible in the diagnostic plots, but also in the alignment file, that the graph has been broken into isolated components formed by sets of sequences that have >95% pairwise identity. You can also check this by obtaining the length of the graph with `odgi statss`.
 
 Another key parameter is `-k`. This filter removes exact matches from alignments that are shorter than `-k`. Short matches occur in regions of high diversity. In practice, these short matches contribute little to the overall structure of the graph, and we can remove them to further simplify the base graph structure. 
 
 > ## Exercise
 > 
-> What happens if we reduce the length of the matches to 0? Keep the identity at 80%.
+> What happens if we increase the length of the matches to 47?.
 >
 >> ## Solution
 >> 
->> There is only minimal differences between the previous graph and the new graph. One would expect that lowering identity has a significant impact on the graph by providing more opportunity for an alignment.
+>> The graph starts to become "braided", where regions previously aligned due to short matches are not longer joined. We might say that it is under-aligned.
 >>
 > {: .solution}
 {: .challenge}
@@ -120,6 +109,8 @@ Pangenome variation graphs built by pggb are based on homology mappings. The hom
 
 You can think of `-s` as a seed length for the mappings. It defaults to 5kb, which testing has shown to provide a good tradeoff for computational efficiency, graph collinearity, and SV breakpoint detection. Setting it much higher can start to reduce sensitivity to small homologies.
 
-Increasing `-s` to 10 kb results in a touch of "underalignment". One of the sequences is not completely aligned into the graph, resulting in the appearance of a new graph tip.
+Increasing `-s` to >10 kb results in a touch of "underalignment". On of the sequences is not aligned into the graph, and two more are only partially aligned, resulting in the appearance of a new graph tip. 
+
+This highlights that pan-genome graph genome graph generation is sensitive to the parameters used. It is important to 
 
 {% include links.md %}
