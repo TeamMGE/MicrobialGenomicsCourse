@@ -76,6 +76,7 @@ We can look into a simple representation of the alignments that underly the grap
 > ~~~
 > $ paf2dot png small DRB1-3123.fa.bf3285f.alignments.wfmash.paf 
 > ~~~
+ {: .bash}
 
 You can transfer the output file to your local machine. As you can see from the alignments, and also visible from the graph, one of the sequences is inverted (tip: sequences inverted to increase readability are indicated with a \*).
 
