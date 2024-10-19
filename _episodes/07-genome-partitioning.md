@@ -121,4 +121,6 @@ $ seq 0 18 | while read i; do echo "community $i"; samtools faidx combined.fna $
 ~~~
 {: .bash}
 
+This will generate a single fasta file for each community, which we can later use as input for `pggb`.
+
 {% include links.md %}
