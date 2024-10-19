@@ -8,7 +8,7 @@ questions:
 objectives:
 - Create a pan-genome graph using pggb.
 - Interpret the basic features of a pan-genome graph.
-- Visualize a pan-genome graph and interpret 
+- Visualize a pan-genome graph and interpret the shape and basic features of the graph. 
 keypoints:
 - You can generate a pan-genome graph using pggb.
 - You can critically evaluate technical and biological factors that can shape a pan-genome graph.
