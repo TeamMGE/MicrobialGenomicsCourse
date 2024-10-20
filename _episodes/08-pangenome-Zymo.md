@@ -1,5 +1,5 @@
 ---
-title: "Pan-genome graphs of *Zymoseptoria tritici*"
+title: "Pan-genome graphs of Zymoseptoria tritici"
 teaching: 0
 exercises: 150
 questions:
