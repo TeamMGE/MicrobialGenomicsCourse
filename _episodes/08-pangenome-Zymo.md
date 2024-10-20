@@ -78,7 +78,7 @@ $ mummerplot --png --color IPO323chr3v3D7chr3.delta -q "ST99CH_3D7#1#LT853694.1"
 >
 >> ## Solution
 >> 
->> 
+>> Yes, the alignment of the regions indicates that IPO323 lacks a large region (~100 kb) that is present in 3D7. The region seems to contain repetitive elements, at least partially visible due to the other off-diagonal matches. Based on the paper, the region also seems to be absent in other strains but we cannot easily see this from the pair-wise alignment. To address this question, we would need to compute multiple pairwise alignments between all of the strains in our analyses.
 >>
 > {: .solution}
 {: .challenge}
