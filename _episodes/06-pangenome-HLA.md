@@ -16,7 +16,6 @@ keypoints:
 
 #  Pan-genome graphs
 ## Introduction to pan-genome graphs
-
 Standard approaches to genome analysis typically relate sequences to a single linear reference genome. This is efficient but has a fundamental problem: Differences from this reference are hard to observe and describe. When we compared different  *Zymoseptoria tritici* isolates, we have seen that these differ for example in the number and type of dispensable chromosomes. Depending on the reference, these might be difficult to identify and compare across multiple strains. Pan-genomic methods allow us to relate all genomes or sequences in an analysis directly to each other. 
 
 The variation graph data model describes the all-to-all alignment of many sequences as walks through a graph whose nodes are labeled with DNA sequences.
@@ -52,7 +51,7 @@ We obtain a series of images that represent the pan-genome alignment. These are 
 
 First, the 2D layout gives us an overview of the total alignment. For small graphs, we can look at the version that shows where specific paths go (*.draw\_multiqc.png). For larger ones, the *.draw.png result is usually more legible, but it lacks path information. Each coloured rectangle represents a node of a path. The node’s x-coordinates are on the x-axis and the y-coordinates are on the y-axis, respectively. A bubble indicates that here some paths have a diverging sequence or it can represent a repeat region.
 
-We also get some 1D visualisations. These present the graph as a kind of matrix. Across the x-axis we have nodes of the graph (scaled by length) and across the y-axis we have paths, or sequences, which have been embedded in the graph. This layout is capable of representing several kinds of information using color. The default associates a color with each path. There are also images that display the orientation of paths using two views. One shows the "position" of each path relative to the graph. It runs light to dark from 0 to path length. A similar view shows inverted regions of paths relative to the graph in red, while the forward orientation in black. Finally, a compressed view shows coverage across the pan-genome coordinate space of all paths. It's a kind of heatmap. This helps when we have a lot of paths to consider.
+We also get some 1D visualisations. These present the graph as a kind of matrix, where information is aggregated into bins. By default, the optimal bin size for visualisation is determined automatically for optimal visualisation but can be adjusted as a parameter in `odgi`. Across the x-axis we have nodes of the graph (scaled by length) and across the y-axis we have paths, or sequences, which have been embedded in the graph. This layout is capable of representing several kinds of information using color. The default associates a color with each path. There are also images that display the orientation of paths using two views. One shows the "position" of each path relative to the graph. It runs light to dark from 0 to path length. A similar view shows inverted regions of paths relative to the graph in red, while the forward orientation in black. Finally, a compressed view shows coverage across the pan-genome coordinate space of all paths. It's a kind of heatmap. This helps when we have a lot of paths to consider.
 
 > ## Exercise
 > 

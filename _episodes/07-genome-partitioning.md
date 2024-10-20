@@ -18,8 +18,8 @@ keypoints:
 ## Background
 Pan-genome graphs can represent all possible alignments between a collections of sequences, both within a single strain or individual as well as between a collection of strains/individuals. However, we cannot expect to pairwise map all sequences together and obtain well separated connected components that might represent similarities between the homologous chromosomes of different strains/individuals. It is much more likely to get a giant connected component, likely due to shared sequences that occur on all chromosomes, e.g., telomeric repeats, centromers or other transposable elements. Moreover, there will be likely a few smaller ones, due to incorrect mappings or false homologies. This might unnecessarily increase the computational burden, especially for larger genomes as well as complicate the downstream analyses. Therefore, it is recommended to split the input sequences into homologous 'communities' in order to find the structure of their mutual relationship. For example, these homologous communities can represent the different chromosomes of the input genomes. However, if you know in advance that your sequences contain particular rearrangements, which are common in many fungi, you might consider skipping this step or tuning it accordingly to your biological questions.
 
-##Community detection
-we will analyse a set of six *Zymoseptoria tritici* strains that have been sequenced as part of a pan-genome [paper](https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-020-0744-3). We assume that these genome assemblies are (near)chromosomal-level, and therefore represent an interesting dataset to build a pan-genome graph.
+## Community detection
+We will analyse a set of six *Zymoseptoria tritici* strains that have been sequenced as part of a pan-genome [paper](https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-020-0744-3). We assume that these genome assemblies are (near)chromosomal-level, and therefore represent an interesting dataset to build a pan-genome graph.
 
 The genome assemblies are in **data/pangenome**. 
 
