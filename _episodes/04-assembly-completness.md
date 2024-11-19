@@ -21,7 +21,7 @@ $ BUSCO.py -i ${genome} -c 24 -o ${genome} -m geno -l ascomycota_odb9
 ~~~
 {: .bash}
 
-The output data for BUSCO that can be found at **data/busco/**. We will initially focus on a set of *Zymoseptoria* genomes only (zymo/ directory). 
+The output data for BUSCO that can be found at **data/fungalgenomics_seidl/busco/**. We will initially focus on a set of *Zymoseptoria* genomes only (zymo/ directory). 
 
 We will first take a look at the results for the reference genome IPO323.
 

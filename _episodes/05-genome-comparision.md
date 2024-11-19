@@ -45,8 +45,7 @@ $ nucmer -h
 > {: .solution}
 {: .challenge}
 
-We now want to perform a WGA between the *Z. tritici* IPO323 reference genome assembly and one other *Zymoseptoria* genome. Take one of the genome assemblies you previously identified to be of high quality, ideally chromosomal-scale. The genome assemblies can be found in **data/assemblies/**. 
-
+We now want to perform a WGA between the *Z. tritici* IPO323 reference genome assembly and one other *Zymoseptoria* genome. Take one of the genome assemblies you previously identified to be of high quality, ideally chromosomal-scale. The genome assemblies can be found in **~/data/fungalgenomics_seidl/assemblies/**. 
 
 ~~~
 $ nucmer -p IPO323v3D7 --maxmatch -t 2 IPO323.fna ST99CH_3D7.fna 

@@ -27,7 +27,7 @@ $ quast --help
 We will now prepare and execute a QUAST analysis for one *Zymoseptoria* genome assembly. We will use the genome assembly of strain ASM22370. We will compare this strain to reference IPO323 genome and annotation as a comparison. Please make sure the output goes to your local folder and specify the number of threads (max=2).
 
 ~~~
-$ quast.py -o quast_output -g gene:data/IPO323.gff -r data/IPO323.fna data/ASM22370v2.fna -t 2 
+$ quast -o quast_output -g gene:data/IPO323.gff -r data/IPO323.fna data/ASM22370v2.fna -t 2 
 ~~~
 {: .bash}
 
@@ -57,7 +57,7 @@ It is particularly relevant to think about the number of contigs of the genome a
 > {: .solution}
 {: .challenge}
 
-The report files \(html and txt\) for all the _Zymoseptoria_ genomes \(of those available in 2018\) can be found in the QUAST folder \(**~/data/quast/**\). You can open the files to further assess and compare the quality of more genomes.
+The report files \(html and txt\) for all the _Zymoseptoria_ genomes \(of those available in 2018\) can be found in the QUAST folder \(**~/data/fungalgenomics_seidl/quast/**\). You can open the files to further assess and compare the quality of more genomes.
 
 > ## Exercise
 > 
