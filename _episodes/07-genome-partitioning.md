@@ -21,7 +21,7 @@ Pan-genome graphs can represent all possible alignments between a collections of
 ## Community detection
 We will analyse a set of six *Zymoseptoria tritici* strains that have been sequenced as part of a pan-genome [paper](https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-020-0744-3). We assume that these genome assemblies are (near)chromosomal-level, and therefore represent an interesting dataset to build a pan-genome graph.
 
-The genome assemblies are in **data/pangenome**. 
+The genome assemblies are in **~/data/fungalgenomics_seidl/pangenome**. 
 
 Before we can form these communities, it is useful to get an idea about the overall similarity between the chromosomes within and between these strains. First, we can determine the number of chromosomes/contigs in each of the assemblies.
 

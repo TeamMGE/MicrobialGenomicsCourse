@@ -26,7 +26,7 @@ In this exercise, we will use the PanGenome Graph Builder [(pggb)](https://githu
 
 Before moving into more complex pan-genome graphs of *Zymoseptoria*, we will first focus on a more simple genome graph. The human leukocyte antigen (HLA) system is a complex of genes on chromosome 6 in human which encode cell-surface proteins responsible for the regulation of the immune system.
 
-The DRB1 beta chain is a protein that in humans is encoded by the HLA-DRB1 gene. We have a fasta file of DRB1 genes (DRB1-3123.fa; the file is in **data/pangenome/**). 
+The DRB1 beta chain is a protein that in humans is encoded by the HLA-DRB1 gene. We have a fasta file of DRB1 genes (DRB1-3123.fa; the file is in **~/data/fungalgenomics_seidl/pangenome/**). 
 
 Before we can generate the pan-genome graph, we will need to change the python version. We can do this by
 
@@ -49,7 +49,7 @@ Take a look at the files in the DRB1\_3123.1 folder. We get a graph in GFA (*.gf
 
 We obtain a series of images that represent the pan-genome alignment. These are created with `odgi viz` (1D matrix) and `odgi layout` with `odgi draw` (2D graph drawings). You can transfer the *png files from the server to your local machine. Please note that the node order in the visualisations has been modified to enhance readability.
 
-First, the 2D layout gives us an overview of the total alignment. For small graphs, we can look at the version that shows where specific paths go (*.draw\_multiqc.png). For larger ones, the *.draw.png result is usually more legible, but it lacks path information. Each coloured rectangle represents a node of a path. The node’s x-coordinates are on the x-axis and the y-coordinates are on the y-axis, respectively. A bubble indicates that here some paths have a diverging sequence or it can represent a repeat region.
+First, the 2D layout gives us an overview of the total alignment. For small graphs, we can look at the version that shows where specific paths go (*.draw\_multiqc.png). For larger ones, the *.draw.png result is usually more legible, but it lacks path information. Each coloured rectangle represents a node of a path. The node???s x-coordinates are on the x-axis and the y-coordinates are on the y-axis, respectively. A bubble indicates that here some paths have a diverging sequence or it can represent a repeat region.
 
 We also get some 1D visualisations. These present the graph as a kind of matrix, where information is aggregated into bins. By default, the optimal bin size for visualisation is determined automatically for optimal visualisation but can be adjusted as a parameter in `odgi`. Across the x-axis we have nodes of the graph (scaled by length) and across the y-axis we have paths, or sequences, which have been embedded in the graph. This layout is capable of representing several kinds of information using color. The default associates a color with each path. There are also images that display the orientation of paths using two views. One shows the "position" of each path relative to the graph. It runs light to dark from 0 to path length. A similar view shows inverted regions of paths relative to the graph in red, while the forward orientation in black. Finally, a compressed view shows coverage across the pan-genome coordinate space of all paths. It's a kind of heatmap. This helps when we have a lot of paths to consider.
 
