@@ -43,7 +43,7 @@ $ samtools faidx combined.fna
 To estimate the distance of each input sequence to every other sequence in the set, we use [mash](https://mash.readthedocs.io/en/latest/). The `mash triangle` command outputs a lower-triangular distance matrix if all-vs-all comparisons between all chromosomes.
 
 ~~~
-$ mash triangle combined.fna combined.fna -s 10000 -i > combined.triangle.tsv
+$ mash triangle combined.fna -s 10000 -i > combined.triangle.tsv
 ~~~
 {: .bash}
 
