@@ -91,7 +91,7 @@ The `-p` setting affects the level of pairwise divergence that's accepted in the
  
 It is clearly visible in the diagnostic plots, but also in the alignment file, that the graph has been broken into isolated components formed by sets of sequences that have >95% pairwise identity. You can also check this by obtaining the length of the graph with `odgi statss`.
 
-Another key parameter is `-k`. This filter removes exact matches from alignments that are shorter than `-k`. Short matches occur in regions of high diversity. In practice, these short matches contribute little to the overall structure of the graph, and we can remove them to further simplify the base graph structure. 
+Another key parameter is `-k`. This filter removes exact matches from alignments that are shorter than `-k`. Short matches can also occur in regions of higher diversity. In practice, these short matches contribute little to the overall structure of the graph, and we can remove them to further simplify the base graph structure. 
 
 > ## Exercise
 > 
