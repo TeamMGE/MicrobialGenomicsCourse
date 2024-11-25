@@ -67,7 +67,7 @@ $ mash triangle combined.fna combined.fna -s 10000 -i > combined.triangle.tsv
 Since we now established that most non-homologous chromosomes diverged for >10% and homologous chromosomes are much more similar, we can now automatically detect communities in our dataset. 
 
 ~~~
-$ wfmash combined.fna -p 90 -t 4 -n 5 -m -i > combined.mapping.paf
+$ wfmash combined.fna -p 90 -t 4 -n 5 -m > combined.mapping.paf
 ~~~
 {: .bash}
 
