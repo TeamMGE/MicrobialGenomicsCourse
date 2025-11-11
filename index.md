@@ -16,11 +16,11 @@ This lesson uses the [Software Carpentry]({{ site.swc_site }}) and [Data Carpent
 > 4.  Wednesday, 12:00 - 12:30: Gemome completness with BUSCO
 > 5.  Wednesday, 13:15 - 15:30: Whole-genome alignmnet with MUMMER
 > 6.  Wednesday, 15:30 - ...  : Discussion
-> 7.  Monday, 09:00 - 10:00: Intro lecture into pan-genomes
-> 8.  Monday, 10:00 - 11:30: How to build a pan-genome graphs
-> 9.  Monday, 11:30 - 12:45: Genome partitioning
-> 10. Monday, 13:15 - 15:30: Pan-genome graphs for fungal genomes
-> 11. Monday, 15:30 - ...  : Discussion
+> 7.  Thursday, 09:00 - 10:00: Intro lecture into pan-genomes
+> 8.  Thursday, 10:00 - 11:30: How to build a pan-genome graphs
+> 9.  Thursday, 11:30 - 12:45: Genome partitioning
+> 10. Thursday, 13:15 - 15:30: Pan-genome graphs for fungal genomes
+> 11. Thursday, 15:30 - ...  : Discussion
 {: .checklist}
 
 > ## Data
