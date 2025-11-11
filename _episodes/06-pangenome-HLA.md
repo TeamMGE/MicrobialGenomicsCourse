@@ -1,6 +1,7 @@
 ---
 title: "Introduction to pan-genome graphs"
 teaching: 0
+start: true
 exercises: 90
 questions:
 - How can we build a pan-genome graph of multiple sequences?
