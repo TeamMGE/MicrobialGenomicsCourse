@@ -39,11 +39,11 @@ Inspect the assembly_summary file further. You can look at [README_assembly_summ
 
 > ## Exercise
 > 
-> What does the term ‘representative genome’ refer to?
+> What does the term ‘reference genome’ refer to?
 >
 >> ## Solution
 >> 
->> Representative genomes: Additional high-quality genomes are identified by clustering genomes and applying weighting metrics that include consideration of species-level taxonomic classification (e.g., a preference for type strain) and assembly quality (e.g. a preference for complete genomes but WGS is allowed). Additional quality assurance analysis is being added to add consideration of annotation quality metrics such as assessing the number of frame-shifted proteins (compared to close neighbours), presence of the set of expected rRNA and tRNAs, and gene density. We also take into consideration taxonomic diversity and will include some genomes that are taxonomic outliers for which little functional information is available in the representative genome collection.
+>> Reference genome: For each defined species with genome assemblies included in RefSeq, one genome is designated as the “reference”, with rare exceptions. This set of reference genomes is a compact, normalized, and taxonomically diverse view of the RefSeq collection that can be used for the taxonomic identification and characterization of novel sequences. For eukaryotes, a reference genome is computationally or manually selected from among the best genomes available for each species, using the following selection hierarchy: i) The genome is not overtly contaminated or from an unverified species. ii) The genome is not overtly partial. iii) Genomes included in the current RefSeq set are preferred if available for the species. A particular genome is manually selected for RefSeq annotation and considers community usage and genome quality. For species with more than one RefSeq genome (e.g., human), one is manually selected as the reference genome. In exceptional cases there may be more than one reference genome selected for some species (e.g., dog and dingo, two subspecies of Canis lupus). iv) Highest contig N50, binned based on rounded log10 values. v) Genomes with gapless chromosomes are preferred. vi) Genomes with a full set of assembled chromosomes are preferred. vii) Genomes with at least one assembled chromosome are preferred. viii) Genomes with at least some sequences assigned to chromosomes (aka unlocalized scaffolds) are preferred. ix) Highest unbinned N50 value (either contig or scaffold).
 >> 
 > {: .solution}
 {: .challenge}
