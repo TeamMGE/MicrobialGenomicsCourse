@@ -21,7 +21,7 @@ Standard approaches to genome analysis typically relate sequences to a single li
 
 The variation graph data model describes the all-to-all alignment of many sequences as walks through a graph whose nodes are labeled with DNA sequences.
 
-In this exercise, we will use the PanGenome Graph Builder [(pggb)](https://github.com/pangenome/pggb). The tutorial is inspired by a [pggb workship](https://github.com/pangenome/pggb-workshop). We will first focus on a single example of sequences to build pan-genome graphs and inspect them to understand how the method works and the effects of some of its key parameters.
+In this exercise, we will use the PanGenome Graph Builder [(pggb)](https://github.com/pangenome/pggb). The tutorial is inspired by a [pggb workshop](https://github.com/pangenome/pggb-workshop). We will first focus on a single example of sequences to build pan-genome graphs and inspect them to understand how the method works and the effects of some of its key parameters.
 
 `pggb` work by first performing an all-vs-all alignment to produce base-level alignments. Subsequently, these alignments are converted into a graph that is then filter to remove small matches. 
 
