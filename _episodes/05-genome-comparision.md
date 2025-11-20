@@ -113,7 +113,7 @@ Focus on the alignment of one core chromosome and one dispensable chromosome. Wh
 
 > ## Exercise
 > 
-> A recent manuscript by [Baudet and colleagues](https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-020-0744-3) displays an insertion/deletion on chromosome 3 between IPO323 and 3D7. Based on the whole-genome alignments, are you able to recover this structural variation?
+> A recent manuscript by [Badet and colleagues](https://bmcbiol.biomedcentral.com/articles/10.1186/s12915-020-0744-3) displays an insertion/deletion on chromosome 3 between IPO323 and 3D7. Based on the whole-genome alignments, are you able to recover this structural variation?
 >
 >> ## Solution
 >> 
